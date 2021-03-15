@@ -1,0 +1,21 @@
+import {
+    StyleSheet
+} from 'react-native';
+import { SIZES } from '../../../assets/theme';
+
+export default StyleSheet.create({
+    container:{
+        paddingHorizontal:SIZES.padding,
+        marginTop:25
+    },
+    email:{
+        flexDirection:'row',
+        alignItems:'center',
+        borderBottomColor:'#FFFFFF64',
+        borderBottomWidth:2
+    },
+    textInput:{
+        paddingLeft: 15,
+        color:'white'
+    }
+})
