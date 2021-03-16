@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import RegisterComponent from '../../components/Register';
 
 
-const Login = () => {
+const Register = () => {
     return (
         <ScrollView>
             <RegisterComponent />
@@ -13,4 +13,4 @@ const Login = () => {
 
 
 
-export default Login
+export default Register;

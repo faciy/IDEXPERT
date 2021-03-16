@@ -20,7 +20,7 @@ const RegisterComponent = () => {
     const [register, setRegister] = useState('')
 
 
-    const Register = () => {
+    const Regist = () => {
         console.log('inscription')
     }
 
@@ -73,7 +73,7 @@ const RegisterComponent = () => {
                         <View>
                             <ButtonCustom
                                 text={<Text>Valider</Text>}
-                                onPress={() => Register()} />
+                                onPress={() => Regist()} />
                         </View>
                     </ImageBackground>
                 </ImageBackground>

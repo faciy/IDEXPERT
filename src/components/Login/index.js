@@ -11,8 +11,11 @@ import logoLock from '../../assets/icons/lock.png';
 import Checkbox from '../common/Checkbox';
 import ButtonCustom from '../common/ButtonCustom';
 import OtherButton from '../common/OtherButton';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginComponent = () => {
+
+    const navigation = useNavigation();
 
     const [email, setEmail] = useState('')
     const [pasword, setPassword] = useState('')
@@ -23,11 +26,11 @@ const LoginComponent = () => {
     }
 
     const ButtonConnexion = () => {
-        console.log('connexion')
+        
     }
 
     const Register = () => {
-        console.log("s'inscrire")
+        navigation.navigate("Register")
     }
 
     return (
@@ -78,7 +81,7 @@ const LoginComponent = () => {
                             <Text style={styles.text}>Aucun Compte?</Text>
                             <OtherButton
                                 text={<Text>S'inscrire</Text>}
-                                onPress={() => Register()} />
+                                onPress={Register} />
                         </View>
                     </ImageBackground>
                 </ImageBackground>

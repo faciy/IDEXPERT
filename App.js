@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import Navigation from './src/navigations/Navigation';
 // import Activate from './src/screens/Activate';
 // import Verification from './src/screens/Verification';
 // import Register from './src/screens/Register';
 
-import Login from './src/screens/Login';
+// import Login from './src/screens/Login';
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Login />
+      <Navigation />
     </View>
   )
 }
