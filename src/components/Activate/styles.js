@@ -19,27 +19,17 @@ export default StyleSheet.create({
         height: SIZES.height,
         width: SIZES.width
     },
-    logo:{
-        alignSelf:'center',
-        marginTop: 134
-    },
-    textConnexion:{
-        marginTop:20,
-        fontSize:30,
-        color:'white',
-        textAlign:'center'
-    },
-    registerButton:{
-        marginTop:30,
-        flexDirection:'row',
-        justifyContent:'space-evenly'
-    },
-    text:{
-        color:'white'
+    button: {
+        width:SIZES.width - 80,
+        alignSelf:'center'
     },
     textInput:{
-        paddingLeft: 15,
-        color:'white'
-    }
+        alignSelf:'center',
+    },
+    minuter:{
+        alignSelf:'center',
+        bottom:40
+    },
+   
    
 })

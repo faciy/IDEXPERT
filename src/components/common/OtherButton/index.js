@@ -2,14 +2,14 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const ForgetButton = ({onPress}) => {
+const OtherButton = ({onPress,text}) => {
     return (
         <View>
             <TouchableOpacity onPress={onPress}>
-                <Text style={styles.text}>Mot de passe oublié?</Text>
+                <Text style={styles.text}>{text}</Text>
             </TouchableOpacity>
         </View>
     )
 }
 
-export default ForgetButton
+export default OtherButton;

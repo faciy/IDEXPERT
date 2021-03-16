@@ -9,9 +9,8 @@ import logo from '../../assets/icons/logoIdExpert.png';
 import logoEmail from '../../assets/icons/email.png';
 import logoLock from '../../assets/icons/lock.png';
 import Checkbox from '../common/Checkbox';
-import ForgetButton from '../common/ForgetButton';
-import ButtonLogin from '../common/ButtonLogin';
-import RegisterButton from '../common/RegisterButton';
+import ButtonCustom from '../common/ButtonCustom';
+import OtherButton from '../common/OtherButton';
 
 const LoginComponent = () => {
 
@@ -19,7 +18,7 @@ const LoginComponent = () => {
     const [pasword, setPassword] = useState('')
     const [isSelected, setSelection] = useState(true);
 
-    const ButtonForget = () =>{
+    const ButtonForget = () => {
         console.log('ok')
     }
 
@@ -48,12 +47,14 @@ const LoginComponent = () => {
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="E-mail | Nom d'utilisateur"
                                 onChangeText={() => setEmail()}
+                                style={styles.textInput}
                             />
                             <Input
                                 icon={<Image source={logoLock} />}
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Mot de passe"
                                 onChangeText={() => setPassword()}
+                                style={styles.textInput}
                             />
                         </View>
                         <View style={styles.checkboxAndForgetButton}>
@@ -61,17 +62,23 @@ const LoginComponent = () => {
                                 value={isSelected}
                                 onValueChange={setSelection}
                             />
-                             <Text style={styles.label}>Resté connecté</Text>
-                            <ForgetButton onPress={() => ButtonForget()}/>
+                            <Text style={styles.label}>Resté connecté</Text>
+                            <OtherButton
+                                text={<Text>Mot de passe oublié?</Text>}
+                                onPress={() => ButtonForget()} />
                         </View>
                         {/* ButtonLogin  */}
                         <View>
-                            <ButtonLogin onPress={() => ButtonConnexion()}/>
+                            <ButtonCustom
+                                text={<Text>Connexion</Text>}
+                                onPress={() => ButtonConnexion()} />
                         </View>
                         {/* ButtonRegister */}
                         <View style={styles.registerButton}>
                             <Text style={styles.text}>Aucun Compte?</Text>
-                            <RegisterButton onPress={() => Register()}/>
+                            <OtherButton
+                                text={<Text>S'inscrire</Text>}
+                                onPress={() => Register()} />
                         </View>
                     </ImageBackground>
                 </ImageBackground>

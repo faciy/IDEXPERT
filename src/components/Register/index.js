@@ -10,7 +10,7 @@ import logoEmail from '../../assets/icons/email.png';
 import avatar from '../../assets/icons/avatar.png';
 import drapeau from '../../assets/icons/drapeau.png';
 import phone from '../../assets/icons/phone.png';
-import ButtonRegister from '../../components/common/ButtonRegister';
+import ButtonCustom from '../common/ButtonCustom';
 
 const RegisterComponent = () => {
 
@@ -41,13 +41,15 @@ const RegisterComponent = () => {
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="E-mail | Nom d'utilisateur"
                                 onChangeText={() => setEmail()}
+                                style={styles.textInput}
                             />
                             <Input
-                                icon={<Image   
+                                icon={<Image
                                     source={drapeau} />}
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Choix du pays"
                                 onChangeText={() => setSelection()}
+                                style={styles.textInput}
                             />
                             <Input
                                 icon={<Image
@@ -55,6 +57,7 @@ const RegisterComponent = () => {
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Numéro de téléphone"
                                 onChangeText={() => setNumber()}
+                                style={styles.textInput}
                             />
                             <Input
                                 icon={<Image
@@ -62,12 +65,15 @@ const RegisterComponent = () => {
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Numéro d'inscription"
                                 onChangeText={() => setRegister()}
+                                style={styles.textInput}
                             />
                         </View>
 
-                        {/* ButtonLogin  */}
+                        {/* ButtonRegister  */}
                         <View>
-                            <ButtonRegister onPress={() => Register()} />
+                            <ButtonCustom
+                                text={<Text>Valider</Text>}
+                                onPress={() => Register()} />
                         </View>
                     </ImageBackground>
                 </ImageBackground>

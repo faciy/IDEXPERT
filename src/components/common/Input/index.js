@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, TextInput, Image } from 'react-native';
 import styles from './styles';
-// import email from '../../../assets/icons/email.png'
 
 const Input = ({
     placeholder,
     placeholderTextColor,
     onChangeText,
-    icon
+    icon,
+    style,
 }) => {
     return (
         <View style={styles.container}>
@@ -17,7 +17,7 @@ const Input = ({
                 <TextInput
                     placeholder={placeholder}
                     placeholderTextColor={placeholderTextColor}
-                    style={styles.textInput}
+                    style={style}
                     onChangeText={onChangeText}
                 />
             </View>

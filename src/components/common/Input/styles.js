@@ -14,8 +14,5 @@ export default StyleSheet.create({
         borderBottomColor:'#FFFFFF64',
         borderBottomWidth:2
     },
-    textInput:{
-        paddingLeft: 15,
-        color:'white'
-    }
+    
 })

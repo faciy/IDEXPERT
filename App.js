@@ -1,13 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Register from './src/screens/Register';
-// import Login from './src/screens/Login';
+import { View, StyleSheet } from 'react-native';
+// import Activate from './src/screens/Activate';
+// import Verification from './src/screens/Verification';
+// import Register from './src/screens/Register';
+
+import Login from './src/screens/Login';
 
 
 const App = () => {
+
+
   return (
     <View style={styles.container}>
-      <Register />
+      <Login />
     </View>
   )
 }

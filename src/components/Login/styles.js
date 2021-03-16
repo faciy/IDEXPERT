@@ -47,6 +47,11 @@ export default StyleSheet.create({
     },
     text:{
         color:'white'
-    }
+    },
+    textInput:{
+        paddingLeft: 15,
+        color:'white'
+    },
+    
    
 })
