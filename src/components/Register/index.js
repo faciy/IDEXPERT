@@ -7,28 +7,21 @@ import Rectangle from '../../assets/images/Rectangle.png';
 import Trace from '../../assets/images/Trace.png';
 import logo from '../../assets/icons/logoIdExpert.png';
 import logoEmail from '../../assets/icons/email.png';
-import logoLock from '../../assets/icons/lock.png';
-import Checkbox from '../common/Checkbox';
-import ForgetButton from '../common/ForgetButton';
-import ButtonLogin from '../common/ButtonLogin';
-import RegisterButton from '../common/RegisterButton';
+import avatar from '../../assets/icons/avatar.png';
+import drapeau from '../../assets/icons/drapeau.png';
+import phone from '../../assets/icons/phone.png';
+import ButtonRegister from '../../components/common/ButtonRegister';
 
-const LoginComponent = () => {
+const RegisterComponent = () => {
 
     const [email, setEmail] = useState('')
-    const [pasword, setPassword] = useState('')
-    const [isSelected, setSelection] = useState(true);
+    const [selection, setSelection] = useState('')
+    const [number, setNumber] = useState('')
+    const [register, setRegister] = useState('')
 
-    const ButtonForget = () =>{
-        console.log('ok')
-    }
-
-    const ButtonConnexion = () => {
-        console.log('connexion')
-    }
 
     const Register = () => {
-        console.log("s'inscrire")
+        console.log('inscription')
     }
 
     return (
@@ -40,7 +33,7 @@ const LoginComponent = () => {
                         <View style={styles.logo} >
                             <Image source={logo} />
                         </View>
-                        <Text style={styles.textConnexion}>Connexion</Text>
+                        <Text style={styles.textConnexion}>Inscription</Text>
                         {/* Input */}
                         <View>
                             <Input
@@ -50,28 +43,31 @@ const LoginComponent = () => {
                                 onChangeText={() => setEmail()}
                             />
                             <Input
-                                icon={<Image source={logoLock} />}
+                                icon={<Image   
+                                    source={drapeau} />}
                                 placeholderTextColor='#FFFFFF64'
-                                placeholder="Mot de passe"
-                                onChangeText={() => setPassword()}
+                                placeholder="Choix du pays"
+                                onChangeText={() => setSelection()}
+                            />
+                            <Input
+                                icon={<Image
+                                    source={phone} />}
+                                placeholderTextColor='#FFFFFF64'
+                                placeholder="Numéro de téléphone"
+                                onChangeText={() => setNumber()}
+                            />
+                            <Input
+                                icon={<Image
+                                    source={avatar} />}
+                                placeholderTextColor='#FFFFFF64'
+                                placeholder="Numéro d'inscription"
+                                onChangeText={() => setRegister()}
                             />
                         </View>
-                        <View style={styles.checkboxAndForgetButton}>
-                            <Checkbox
-                                value={isSelected}
-                                onValueChange={setSelection}
-                            />
-                             <Text style={styles.label}>Resté connecté</Text>
-                            <ForgetButton onPress={() => ButtonForget()}/>
-                        </View>
+
                         {/* ButtonLogin  */}
                         <View>
-                            <ButtonLogin onPress={() => ButtonConnexion()}/>
-                        </View>
-                        {/* ButtonRegister */}
-                        <View style={styles.registerButton}>
-                            <Text style={styles.text}>Aucun Compte?</Text>
-                            <RegisterButton onPress={() => Register()}/>
+                            <ButtonRegister onPress={() => Register()} />
                         </View>
                     </ImageBackground>
                 </ImageBackground>
@@ -81,4 +77,4 @@ const LoginComponent = () => {
     )
 }
 
-export default LoginComponent;
+export default RegisterComponent;

@@ -1,12 +1,12 @@
 import React from 'react'
 import { ScrollView } from 'react-native';
-import LoginComponent from '../../components/Login';
+import RegisterComponent from '../../components/Register';
 
 
 const Login = () => {
     return (
         <ScrollView>
-            <LoginComponent />
+            <RegisterComponent />
         </ScrollView>
     )
 }

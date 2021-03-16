@@ -11,7 +11,7 @@ const Input = ({
 }) => {
     return (
         <View style={styles.container}>
-            <View style={styles.email}>
+            <View style={styles.input}>
                 {/* image logo */}
                 {icon} 
                 <TextInput

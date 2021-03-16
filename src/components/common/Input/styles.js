@@ -8,7 +8,7 @@ export default StyleSheet.create({
         paddingHorizontal:SIZES.padding,
         marginTop:25
     },
-    email:{
+    input:{
         flexDirection:'row',
         alignItems:'center',
         borderBottomColor:'#FFFFFF64',

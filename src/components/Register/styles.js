@@ -29,17 +29,6 @@ export default StyleSheet.create({
         color:'white',
         textAlign:'center'
     },
-    checkboxAndForgetButton:{
-        flexDirection:'row',
-        paddingHorizontal:SIZES.padding,
-        justifyContent:'space-between',
-        marginTop:30,
-        alignItems:'center'
-    },
-    label:{
-        color:'white',
-        right:20
-    },
     registerButton:{
         marginTop:30,
         flexDirection:'row',
