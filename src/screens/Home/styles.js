@@ -5,7 +5,7 @@ import { SIZES } from '../../assets/theme';
 
 export default StyleSheet.create({
    container:{
-       backgroundColor:'green',
+       backgroundColor:'#1F4F4F',
        height:SIZES.height,
        width:SIZES.width
    }

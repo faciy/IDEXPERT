@@ -2,7 +2,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../screens/Login';
 import Register from '../screens/Register';
-import Home from '../screens/Home';
+import HomeNavigator from '../navigations/HomeNavigator';
 import Verification from '../screens/Verification';
 
 
@@ -17,8 +17,8 @@ const AuthNavigation = () => {
         >
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Register" component={Register} />
-            <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Verification" component={Verification} />
+            <Stack.Screen name="HomeNavigator" component={HomeNavigator} />
         </Stack.Navigator>
     )
 }

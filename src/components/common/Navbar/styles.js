@@ -8,6 +8,6 @@ export default StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between',
     marginTop:30,
-   }
+   },
 
 })

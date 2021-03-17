@@ -1,17 +1,23 @@
 import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
-import styles from './styles'
+import { View, Text, TouchableOpacity, Image } from 'react-native';
+import styles from './styles';
+import notification from '../../../assets/icons/notification.png';
 
-const Navbar = () => {
+const Navbar = ({onPress,imageLogo, imageOther}) => {
     return (
         <View style={styles.navbar}>
             {/* logo button  */}
-            <TouchableOpacity>
-                <Text>Logo</Text>
-            </TouchableOpacity>
+            <View>
+                {imageLogo}
+            </View>
             {/* notification button */}
-            <TouchableOpacity>
-                <Text>Logo</Text>
+            <TouchableOpacity
+            onPress={onPress}
+            style={{alignSelf:'center'}}
+            >
+                <View>
+                    {imageOther}
+                </View>
             </TouchableOpacity>
         </View>
     )
