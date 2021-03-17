@@ -2,19 +2,21 @@ import React from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import styles from './styles';
 import contact from '../../../assets/images/contact.png';
+import { useNavigation } from '@react-navigation/native';
 
 const Body = () => {
+    const navigation = useNavigation();
     
     const ButtonSmart = () => {
-        console.log('buttonsmart')
+        navigation.navigate('SmartCard')
     }
 
     const ButtonScan = () => {
-        console.log('buttonscan')
+        navigation.navigate('Scan')
     }
 
     const ButtonEven = () => {
-        console.log('buttonEven')
+        navigation.navigate('Evenement')
     }
 
     const ButtonContact = () => {
