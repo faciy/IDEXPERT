@@ -11,8 +11,11 @@ import avatar from '../../assets/icons/avatar.png';
 import drapeau from '../../assets/icons/drapeau.png';
 import phone from '../../assets/icons/phone.png';
 import ButtonCustom from '../common/ButtonCustom';
+import { useNavigation } from '@react-navigation/native';
 
 const RegisterComponent = () => {
+
+    const navigation = useNavigation();
 
     const [email, setEmail] = useState('')
     const [selection, setSelection] = useState('')
@@ -21,7 +24,7 @@ const RegisterComponent = () => {
 
 
     const Regist = () => {
-        console.log('inscription')
+       navigation.navigate('Verification')
     }
 
     return (
