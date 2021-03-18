@@ -4,7 +4,7 @@ import Input from '../common/Input';
 import bg from '../../assets/images/DeutscheBank.png';
 import styles from './styles';
 import Rectangle from '../../assets/images/Rectangle.png';
-import Trace from '../../assets/images/Trace.png';
+import Trace from '../../assets/images/TraceOtherpng.png';
 import logo from '../../assets/icons/logoIdExpert.png';
 import logoEmail from '../../assets/icons/email.png';
 import avatar from '../../assets/icons/avatar.png';

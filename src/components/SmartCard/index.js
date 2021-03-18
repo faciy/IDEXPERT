@@ -25,7 +25,9 @@ const SmartCardComponent = () => {
                      style={styles.photo}
                 source={photo}
                 />}
-                text={<Text style={{color:'white'}}>FRANCK BONI</Text>}
+                text={<Text style={{color:'white', 
+                textAlign:'center',
+                }}>FRANCK BONI</Text>}
                 />
                 <Text style={styles.name} >Nom du cabinet</Text>
                 <QrCode 

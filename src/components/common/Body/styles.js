@@ -24,6 +24,7 @@ export default StyleSheet.create({
         borderRadius:20,
         backgroundColor:'#087076'
     },
+    
     cardOne:{
         flexDirection:'row', 
         paddingHorizontal:20, 

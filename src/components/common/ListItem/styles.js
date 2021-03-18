@@ -1,6 +1,7 @@
 import {
     StyleSheet
 } from 'react-native';
+import { SIZES } from '../../../assets/theme';
 
 export default StyleSheet.create({
     listItem: {
@@ -9,21 +10,31 @@ export default StyleSheet.create({
         borderBottomWidth: 2
     },
     container: {
-        // borderBottomColor: '#FFFFFF64',
-        // borderBottomWidth: 2, 
+        borderBottomColor: '#FFFFFF64',
+        borderBottomWidth: 2, 
         marginLeft: 20, 
         marginRight: 20, 
         bottom: 10
     },
+    contain:{
+        paddingHorizontal:20
+    },
     accordion:{
-        bottom: -10, 
+        bottom: -18, 
+        top:10,
+        marginStart:20,
+        marginEnd:-20,
         left: -20, 
-        top: 20 
     },
     item:{
-        borderBottomColor:'black',
+        borderBottomColor:'#FFFFFF64',
         borderBottomWidth:2,
-        paddingHorizontal:20
-    }
+        // paddingHorizontal:20,
+    },
+    background: {
+        resizeMode: "cover",
+        height: SIZES.height,
+        width: SIZES.width
+    },
 
 })

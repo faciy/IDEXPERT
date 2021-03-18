@@ -6,15 +6,13 @@ import Rectangle from '../../assets/images/Rectangle.png';
 import Trace from '../../assets/images/Trace.png';
 import CardVerification from '../common/Verification';
 import ButtonCustom from '../common/ButtonCustom';
+import { useNavigation } from '@react-navigation/native';
 
 const VerificationComponent = () => {
-
-    const Modified = () =>{
-        console.log('Modifier')
-    }
+    const navigation = useNavigation();
 
     const Valider = () =>{
-        console.log('Valider')
+        navigation.navigate('ActivateNavigator')
     }
     
     return (
@@ -24,9 +22,6 @@ const VerificationComponent = () => {
                     <ImageBackground source={Trace} style={styles.trace}>
                         <CardVerification />
                         <View style={styles.button}>
-                            <ButtonCustom 
-                             onPress={() => Modified()}
-                            text={<Text>Modifier le</Text>} />
                             <ButtonCustom 
                             onPress={() => Valider()}
                             text={<Text>Valider</Text>} />

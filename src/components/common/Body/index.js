@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import styles from './styles';
 import contact from '../../../assets/images/contact.png';
 import { useNavigation } from '@react-navigation/native';
+import calendar from '../../../assets/images/calendar.png';
 
 const Body = () => {
     const navigation = useNavigation();
@@ -16,7 +17,7 @@ const Body = () => {
     }
 
     const ButtonEven = () => {
-        navigation.navigate('Evenement')
+        navigation.navigate('EvenementNavigation')
     }
 
     const ButtonContact = () => {
@@ -44,14 +45,12 @@ const Body = () => {
                 onPress={() => ButtonEven()}
                 style={styles.card}>
                     <Image source={contact} />
-                    <Text style={styles.text} >EVENEMENT</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                 onPress={() => ButtonContact()}
                 style={styles.card}>
                     <Image source={contact} />
-                    <Text style={styles.text}>CONTACTS</Text>
                 </TouchableOpacity>   
             </View>
             

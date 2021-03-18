@@ -4,9 +4,9 @@ import Navbar from '../common/Navbar';
 import styles from './styles';
 import imageLogo from '../../assets/icons/logoIdExpert.png';
 import Menu from '../../assets/icons/menu.png';
-import ListEven from '../common/ListEven';
+import ListInfoEven from '../common/ListInfoEven';
 
-const EvenementComponent = () => {
+const EventInfoComponent = () => {
     return (
         <View>
             <View style={styles.header}>
@@ -22,11 +22,11 @@ const EvenementComponent = () => {
             </View>
             <View style={styles.containerBody}>
                     <View style={styles.body}>
-                        <ListEven />
+                        <ListInfoEven />
                     </View>
             </View>
         </View>
     )
 }
 
-export default EvenementComponent;
+export default EventInfoComponent;

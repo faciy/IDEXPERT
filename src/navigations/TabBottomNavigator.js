@@ -3,11 +3,13 @@ import { Image, View, TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SmartCard from '../screens/SmartCard';
 import Scan from '../screens/Scan';
-import Evenement from '../screens/Evenement';
+import EvenementNavigation from '../navigations/EvenementNavigation';
 import Contact from '../screens/Contact';
 import Home from '../screens/Home';
 import lock from '../assets/icons/cloche.png';
 import homeicon from '../assets/icons/home.png';
+import calendar from '../assets/icons/calendar.png';
+import contact from '../assets/images/contact.png';
 import { useNavigation } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
@@ -21,7 +23,7 @@ const tabOptions = {
 }
 
 const TabBottomNavigator = () => {
-    const navigation = useNavigation();  
+    const navigation = useNavigation();
 
     return (
         <Tab.Navigator
@@ -42,24 +44,24 @@ const TabBottomNavigator = () => {
                                         borderRadius: 100, width: 40, height: 40, alignSelf: 'center',
                                         marginTop: 10
                                     }}>
-                                            <Image
-                                                source={homeicon}
-                                                resizeMode="contain"
-                                                style={{
+                                        <Image
+                                            source={homeicon}
+                                            resizeMode="contain"
+                                            style={{
                                                 tintColor: 'white',
                                                 width: 20,
                                                 height: 20,
                                                 alignSelf: 'center',
                                                 top: 8
-                                                }}
-                                            />
+                                            }}
+                                        />
                                     </View>
                                 </View>
                             )
                         case "SmartCard":
                             return (
                                 <Image
-                                    source={lock}
+                                    source={calendar}
                                     resizeMode="contain"
                                     style={{
                                         width: 25,
@@ -70,7 +72,7 @@ const TabBottomNavigator = () => {
                         case "Scan":
                             return (
                                 <Image
-                                    source={lock}
+                                    source={contact}
                                     resizeMode="contain"
                                     style={{
                                         width: 25,
@@ -78,10 +80,10 @@ const TabBottomNavigator = () => {
                                     }}
                                 />
                             )
-                        case "Evenement":
+                        case "EvenementNavigation":
                             return (
                                 <Image
-                                    source={lock}
+                                    source={calendar}
                                     resizeMode="contain"
                                     style={{
                                         width: 25,
@@ -92,7 +94,7 @@ const TabBottomNavigator = () => {
                         case "Contact":
                             return (
                                 <Image
-                                    source={lock}
+                                    source={contact}
                                     resizeMode="contain"
                                     style={{
                                         width: 25,
@@ -123,8 +125,11 @@ const TabBottomNavigator = () => {
                 component={Home}
             />
             <Tab.Screen
-                name="Evenement"
-                component={Evenement}
+                options={{
+                    tabBarLabel: 'Evenement'
+                }}
+                name="EvenementNavigation"
+                component={EvenementNavigation}
             />
             <Tab.Screen
                 name="Contact"

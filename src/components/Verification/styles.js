@@ -21,7 +21,7 @@ export default StyleSheet.create({
     },
     button: {
         width:SIZES.width - 80,
-        bottom:180,
+        bottom:250,
         alignSelf:'center'
     }
    
