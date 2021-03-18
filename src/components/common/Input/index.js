@@ -8,18 +8,22 @@ const Input = ({
     onChangeText,
     icon,
     style,
+    iconList,
+    initial
 }) => {
     return (
         <View style={styles.container}>
             <View style={styles.input}>
                 {/* image logo */}
                 {icon} 
+                {initial}
                 <TextInput
                     placeholder={placeholder}
                     placeholderTextColor={placeholderTextColor}
                     style={style}
                     onChangeText={onChangeText}
                 />
+                {iconList}
             </View>
         </View>
     )

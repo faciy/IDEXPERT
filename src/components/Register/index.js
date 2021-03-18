@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Image, ImageBackground, Text, Button } from 'react-native'
+import { View, Image, ImageBackground, Text, ScrollView } from 'react-native'
 import Input from '../common/Input';
 import bg from '../../assets/images/DeutscheBank.png';
 import styles from './styles';
@@ -12,6 +12,8 @@ import drapeau from '../../assets/icons/drapeau.png';
 import phone from '../../assets/icons/phone.png';
 import ButtonCustom from '../common/ButtonCustom';
 import { useNavigation } from '@react-navigation/native';
+import { List } from 'react-native-paper';
+import ListPays from '../common/ListItem';
 
 const RegisterComponent = () => {
 
@@ -24,14 +26,15 @@ const RegisterComponent = () => {
 
 
     const Regist = () => {
-       navigation.navigate('Verification')
+        navigation.navigate('Verification')
     }
 
-    return (
-        <View >
+    return ( 
+    <ScrollView>
             <ImageBackground source={bg} style={styles.background}>
                 <ImageBackground source={Rectangle} style={styles.rectangle}>
                     <ImageBackground source={Trace} style={styles.trace}>
+                       
                         {/* logoIdExpert  */}
                         <View style={styles.logo} >
                             <Image source={logo} />
@@ -46,20 +49,21 @@ const RegisterComponent = () => {
                                 onChangeText={() => setEmail()}
                                 style={styles.textInput}
                             />
-                            <Input
-                                icon={<Image
-                                    source={drapeau} />}
-                                placeholderTextColor='#FFFFFF64'
-                                placeholder="Choix du pays"
-                                onChangeText={() => setSelection()}
-                                style={styles.textInput}
-                            />
+                            <View >
+                                <ListPays 
+                                num = {number}
+                                setNum={setNumber}
+                                />
+                            </View>
                             <Input
                                 icon={<Image
                                     source={phone} />}
+                                initial={<Text 
+                                style={{color:'#FFFFFF9C',left:5}}
+                                >{number}</Text>}
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Numéro de téléphone"
-                                onChangeText={() => setNumber()}
+                                onChangeText={() => setNumber(number)}
                                 style={styles.textInput}
                             />
                             <Input
@@ -71,7 +75,6 @@ const RegisterComponent = () => {
                                 style={styles.textInput}
                             />
                         </View>
-
                         {/* ButtonRegister  */}
                         <View>
                             <ButtonCustom
@@ -81,7 +84,7 @@ const RegisterComponent = () => {
                     </ImageBackground>
                 </ImageBackground>
             </ImageBackground>
-        </View>
+        </ScrollView>
 
     )
 }
