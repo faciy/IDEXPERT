@@ -33,6 +33,7 @@ const HomeComponent = () => {
             <View style={styles.container}>
                 <Navbar
                     imageLogo={<Image
+                        style={styles.logo}
                         source={logo}
                     />}
                     imageOther={<Image

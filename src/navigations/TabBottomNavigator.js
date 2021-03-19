@@ -11,6 +11,7 @@ import homeicon from '../assets/icons/home.png';
 import calendar from '../assets/icons/calendar.png';
 import contact from '../assets/images/contact.png';
 import { useNavigation } from '@react-navigation/native';
+import phonescan from '../assets/icons/phonescan.png';
 
 const Tab = createBottomTabNavigator();
 
@@ -70,7 +71,7 @@ const TabBottomNavigator = () => {
                         case "SmartCard":
                             return (
                                 <Image
-                                    source={calendar}
+                                    source={lock}
                                     resizeMode="contain"
                                     style={{
                                         width: 25,
@@ -81,7 +82,7 @@ const TabBottomNavigator = () => {
                         case "Scan":
                             return (
                                 <Image
-                                    source={contact}
+                                    source={phonescan}
                                     resizeMode="contain"
                                     style={{
                                         width: 25,

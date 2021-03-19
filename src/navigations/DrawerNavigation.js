@@ -1,13 +1,14 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import AuthNavigation from '../navigations/AuthNavigation';
+import HomeNavigator from '../navigations/HomeNavigator';
+import TabBottomNavigator from '../navigations/TabBottomNavigator';
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="AuthNavigation" component={AuthNavigation} />
+      <Drawer.Screen name="HomeNavigator" component={HomeNavigator} />
     </Drawer.Navigator>
   );
 }

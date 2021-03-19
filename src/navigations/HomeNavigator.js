@@ -3,8 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import TabBottomNavigator from '../navigations/TabBottomNavigator';
 import NotificationNavigation from '../navigations/NotificationNavigation';
-import DrawerNavigation from '../navigations/DrawerNavigation';
-
 
 const Stack = createStackNavigator();
 
@@ -15,7 +13,6 @@ const HomeNavigator = () => {
                 headerShown:false
             }}
         >
-            <Stack.Screen name="DrawerNavigation" component={DrawerNavigation} />
             <Stack.Screen name="TabBottomNavigator" component={TabBottomNavigator} />
             <Stack.Screen 
             options={{

@@ -26,7 +26,7 @@ const LoginComponent = () => {
     }
 
     const ButtonConnexion = () => {
-        navigation.navigate("HomeNavigator")
+        navigation.navigate("DrawerNavigation")
     }
 
     const Register = () => {

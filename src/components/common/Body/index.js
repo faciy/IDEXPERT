@@ -3,7 +3,9 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import styles from './styles';
 import contact from '../../../assets/images/contact.png';
 import { useNavigation } from '@react-navigation/native';
-import calendar from '../../../assets/images/calendar.png';
+import calendar from '../../../assets/icons/calendar.png';
+import lock from '../../../assets/icons/cloche.png';
+import phonescan from '../../../assets/icons/phonescan.png';
 
 const Body = () => {
     const navigation = useNavigation();
@@ -30,13 +32,17 @@ const Body = () => {
                 <TouchableOpacity
                 onPress={() => ButtonSmart()}
                 style={styles.card}>
-                    <Image source={contact} />
+                    <Image 
+                    style={styles.img}
+                    source={lock} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
                 onPress={() => ButtonScan()}
                 style={styles.card}>
-                    <Image source={contact} />
+                    <Image 
+                    style={styles.img}
+                    source={phonescan} />
                 </TouchableOpacity>   
             </View>
 {/* card two  */}
@@ -44,13 +50,17 @@ const Body = () => {
                 <TouchableOpacity
                 onPress={() => ButtonEven()}
                 style={styles.card}>
-                    <Image source={contact} />
+                    <Image 
+                    style={styles.img}
+                    source={calendar} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
                 onPress={() => ButtonContact()}
                 style={styles.card}>
-                    <Image source={contact} />
+                    <Image 
+                    style={styles.img}
+                    source={contact} />
                 </TouchableOpacity>   
             </View>
             

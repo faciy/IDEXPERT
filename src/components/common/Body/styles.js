@@ -38,6 +38,11 @@ export default StyleSheet.create({
     text:{
         color:'white',
         marginTop:10
+    },
+    img:{
+        width:60,
+        height:60,
+        alignSelf:'center'
     }
 
 })

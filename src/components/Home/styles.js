@@ -116,6 +116,10 @@ export default StyleSheet.create({
         right:125,
         top:10  
     },
+    logo:{
+        width:40,
+        height:40
+    }
 
     
       
