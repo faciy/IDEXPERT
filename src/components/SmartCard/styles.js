@@ -15,6 +15,11 @@ export default StyleSheet.create({
         height: '100%',
         borderRadius: 50
     },
+    img:{
+        width:40,
+        height:40,
+        alignSelf:'center'
+    },
     menu:{
         width:30,
         height:30

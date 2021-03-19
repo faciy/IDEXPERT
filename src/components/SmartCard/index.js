@@ -15,7 +15,9 @@ const SmartCardComponent = () => {
         <View style={styles.container} >
             <ImageBackground source={imagefond} style={styles.background}>
                 <Navbar 
-                imageLogo={<Image source={imageLogo} />}
+                imageLogo={<Image 
+                    style={styles.img}
+                    source={imageLogo} />}
                 imageOther={<Image 
                     style={styles.menu}
                     source={Menu} />}
@@ -25,7 +27,7 @@ const SmartCardComponent = () => {
                 style={styles.photo}
                 source={photo}
                 />}
-                text={<Text style={{color:'white', 
+                text={<Text numberOfLines={1} style={{color:'white', 
                 textAlign:'center',
                 }}>FRANCK BONI</Text>}
                 />

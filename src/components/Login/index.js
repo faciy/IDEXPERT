@@ -40,7 +40,9 @@ const LoginComponent = () => {
                     <ImageBackground source={Trace} style={styles.trace}>
                         {/* logoIdExpert  */}
                         <View style={styles.logo} >
-                            <Image source={logo} />
+                            <Image 
+                            style={styles.img}
+                            source={logo} />
                         </View>
                         <Text style={styles.textConnexion}>Connexion</Text>
                         {/* Input */}

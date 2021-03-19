@@ -48,10 +48,14 @@ const ListEven = () => {
         return (
             <View>
                 <View>
+                <TouchableOpacity
+                onPress={() => EventButton()}
+                >
                     <Image
                         style={styles.image}
                         source={item.image}
                     />
+                </TouchableOpacity>
                     <View style={styles.imageCard}>
                         <View style={styles.containeDate}>
                             <Text style={styles.date}>10</Text>
@@ -61,7 +65,7 @@ const ListEven = () => {
                         <View style={styles.bar}></View>
                         <TouchableOpacity
                             style={styles.button}
-                            onPress={() => EventButton()}
+                            onPress={() => {}}
                             >
                                 <Text style={styles.textButton}>{item.part}</Text>
                         </TouchableOpacity>

@@ -30,5 +30,10 @@ export default StyleSheet.create({
         borderRadius: 20,
         backgroundColor: '#A6DBDB',
         paddingHorizontal:20
+    },
+    img:{
+        width:40,
+        height:40,
+        alignSelf:'center'
     }
 })

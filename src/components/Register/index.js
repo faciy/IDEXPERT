@@ -37,7 +37,9 @@ const RegisterComponent = () => {
                        
                         {/* logoIdExpert  */}
                         <View style={styles.logo} >
-                            <Image source={logo} />
+                            <Image 
+                            style={styles.img}
+                            source={logo} />
                         </View>
                         <Text style={styles.textConnexion}>Inscription</Text>
                         {/* Input */}

@@ -22,5 +22,10 @@ export default StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         marginTop:100
+    },
+    img:{
+        width:40,
+        height:40,
+        alignSelf:'center'
     }
 })

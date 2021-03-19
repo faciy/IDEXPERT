@@ -12,7 +12,9 @@ const ContactComponent = () => {
         <View>
             <View style={styles.header}>
                 <Navbar
-                    imageLogo={<Image source={imageLogo} />}
+                    imageLogo={<Image 
+                    style={styles.img}
+                    source={imageLogo} />}
                     imageOther={<Image
                         style={styles.menu}
                         source={Menu} />}
