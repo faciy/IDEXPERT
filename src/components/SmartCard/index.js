@@ -22,7 +22,7 @@ const SmartCardComponent = () => {
                 />
                 <ProfilPhoto 
                 imageProfil={<Image
-                     style={styles.photo}
+                style={styles.photo}
                 source={photo}
                 />}
                 text={<Text style={{color:'white', 

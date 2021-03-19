@@ -52,11 +52,13 @@ export default StyleSheet.create({
     },
     date:{
         textAlign:'center',
-        color:'white'
+        color:'white',
     },
     infoText:{
-        overflow: 'hidden',
         color:'white'
+    },
+    containeDate:{
+        
     }
    
 

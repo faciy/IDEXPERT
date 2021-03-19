@@ -4,9 +4,9 @@ import Navbar from '../common/Navbar';
 import styles from './styles';
 import imageLogo from '../../assets/icons/logoIdExpert.png';
 import Menu from '../../assets/icons/menu.png';
-import ContactList from '../common/ContactList';
+import NotificationList from '../../components/common/NotificationList';
 
-const ContactComponent = () => {
+const NotificationComponent = () => {
 
     return (
         <View>
@@ -18,16 +18,16 @@ const ContactComponent = () => {
                         source={Menu} />}
                 />
                 <View style={{marginTop:50}}>
-                    <Text style={styles.text} >LISTE DES CONTACTS</Text>
+                    <Text style={styles.text} >NOTIFICATION</Text>
                 </View>
             </View>
             <View style={styles.containerBody}>
                     <View style={styles.body}>
-                        <ContactList />
+                        <NotificationList />
                     </View>
             </View>
         </View>
     )
 }
 
-export default ContactComponent;
+export default NotificationComponent;

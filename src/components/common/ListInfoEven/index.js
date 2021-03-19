@@ -27,7 +27,7 @@ const ListInfoEven = () => {
                         </View>
                         <View style={{marginTop:10}}>
                             <Text style={{ overflow: 'hidden', color: 'white' }}>
-                                <Text style={styles.textColor}># TechMonday</Text> @Akil avec Omar Fall qui nous fait sa présentation sur <Text style={styles.textColor}>React Native, Expo</Text> et le développement cross-plateform.
+                                <Text numberOfLines={1} style={styles.textColor}># TechMonday</Text> @Akil avec Omar Fall qui nous fait sa présentation sur <Text  style={styles.textColor}>React Native, Expo</Text> et le développement cross-plateform.
                             <Text style={styles.textColor}># civtech # civdev # 225tech # akiltech</Text>
                             </Text>
                         </View>
@@ -43,9 +43,9 @@ const ListInfoEven = () => {
                                 />
                             </View>
                             <View>
-                                <Text style={styles.text}>Lundi 13 janvier 2020
+                                <Text numberOfLines={1} style={styles.text}>Lundi 13 janvier 2020
                                 </Text>
-                                <Text style={styles.text}>17h24 GMT
+                                <Text numberOfLines={1} style={styles.text}>17h24 GMT
                                 </Text>
                             </View>
                         </View>
@@ -61,9 +61,9 @@ const ListInfoEven = () => {
                                 />
                             </View>
                             <View>
-                                <Text style={styles.text}>Cocody 2 Pltx,8ème tranche
+                                <Text numberOfLines={1} style={styles.text}>Cocody 2 Pltx,8ème tranche
                                 </Text>
-                                <Text style={styles.text}>Cité Wedouwel, Abidjan
+                                <Text numberOfLines={1} style={styles.text}>Cité Wedouwel, Abidjan
                                 </Text>
                             </View>
                         </View>

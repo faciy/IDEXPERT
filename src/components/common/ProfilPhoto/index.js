@@ -8,7 +8,9 @@ const ProfilPhoto = ({imageProfil, text, nameCabinet}) => {
             <View >
                 <View style={styles.green}>
                     <View style={styles.photo} >
-                        {imageProfil}
+                        <View>
+                            {imageProfil}
+                        </View>
                         <View style={styles.text}>
                             {text}
                         </View>

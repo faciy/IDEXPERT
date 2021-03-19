@@ -67,10 +67,10 @@ const ListEven = () => {
                         </TouchableOpacity>
 
                         <View style={styles.infoEven}>
-                            <Text style={styles.infoText}>
+                            <Text numberOfLines={1} style={styles.infoText}>
                                 Titre de l'évènement
                             </Text>
-                            <Text style={styles.infoText}>
+                            <Text numberOfLines={2} style={styles.infoText}>
                                 Le lorem ipsum est, en imprimerie, une suite de mots sans signification rgG
                            </Text>
                         </View>

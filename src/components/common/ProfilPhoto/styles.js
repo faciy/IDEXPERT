@@ -4,7 +4,6 @@ import {
 
 export default StyleSheet.create({
     container:{
-        
         alignItems:'center',
         marginTop:20
     },

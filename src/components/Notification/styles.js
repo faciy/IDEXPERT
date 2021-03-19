@@ -22,11 +22,11 @@ export default StyleSheet.create({
         backgroundColor:'#215D5D',
         width:SIZES.width,
         height:SIZES.height,
-        paddingHorizontal:20
+        paddingHorizontal:20,
     },
     body:{
         marginTop: 30,
-        height: SIZES.height / 1.8,
+        height: SIZES.height / 1.6,
         borderRadius: 20,
         backgroundColor: '#A6DBDB',
         paddingHorizontal:20
