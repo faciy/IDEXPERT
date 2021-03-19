@@ -46,9 +46,15 @@ const HomeComponent = () => {
                     textOne={<Text >BIENVENUE <Text numberOfLines={1}>FRANCK BONI</Text>
                     </Text>}
                     textTwo={<Text >FullStack</Text>}
+                    buttonDec={
+                    <TouchableOpacity
+                    onPress={() => changeModalVisible(true)}
+                    >
+                        <Text style={styles.deconnecter}>Se déconnecter</Text>
+                    </TouchableOpacity>}
                     image={
                         <TouchableOpacity
-                        onPress={() => changeModalVisible(true)}>
+                        onPress={() => navigation.navigate('Profil')}>
                             <Image
                                 style={styles.photo}
                                 source={photo} />
@@ -102,7 +108,10 @@ const HomeComponent = () => {
                                     </View>
                                 </TouchableOpacity>
                             </Modal>
-                        </TouchableOpacity>}
+                        </TouchableOpacity>
+                    
+                    }
+                        
 
                 />
                 <Body />

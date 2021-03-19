@@ -28,11 +28,12 @@ const TabBottomNavigator = () => {
 
     return (
         <Tab.Navigator
+        
         initialRouteName='Home'
             tabBarOptions={tabOptions}
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused }) => {
-
+                    
                     switch (route.name) {
                         case "Home":
                             return (
@@ -124,6 +125,7 @@ const TabBottomNavigator = () => {
                 component={SmartCard}
             />
             <Tab.Screen
+                
                 name="Scan"
                 component={Scan}
             />

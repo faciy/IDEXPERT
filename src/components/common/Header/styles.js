@@ -25,6 +25,6 @@ export default StyleSheet.create({
     },
     text:{
         color:'white'
-    }
+    },
 
 })

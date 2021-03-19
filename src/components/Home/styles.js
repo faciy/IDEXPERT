@@ -119,6 +119,11 @@ export default StyleSheet.create({
     logo:{
         width:40,
         height:40
+    },
+    deconnecter:{
+        color:'white',
+        left:100,
+        textDecorationLine:'underline'
     }
 
     

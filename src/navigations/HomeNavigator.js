@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import TabBottomNavigator from '../navigations/TabBottomNavigator';
 import NotificationNavigation from '../navigations/NotificationNavigation';
+import Profil from '../screens/Profil';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ const HomeNavigator = () => {
             }}
             name="NotificationNavigation" 
             component={NotificationNavigation} />
+            <Stack.Screen name="Profil" component={Profil} />
         </Stack.Navigator>
     )
 }
