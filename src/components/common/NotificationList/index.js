@@ -79,6 +79,10 @@ const NotificationList = () => {
                 data={data}
                 renderItem={renderItem}
                 keyExtractor={item => `${item.id}`}
+                contentContainerStyle={{
+                    padding:6,
+                    right:5
+                }}
             />
         </View>
     )

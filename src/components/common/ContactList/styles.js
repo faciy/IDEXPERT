@@ -5,7 +5,7 @@ import { SIZES } from '../../../assets/theme';
 
 export default StyleSheet.create({
     container: {
-        marginTop: 20,
+        marginTop: 5,
         bottom:10,
         top:-10,
     },

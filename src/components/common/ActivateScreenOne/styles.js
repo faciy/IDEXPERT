@@ -8,7 +8,7 @@ export default StyleSheet.create({
        flex:1,
        justifyContent:'center',
        alignItems:'center' ,
-       marginBottom:-400
+       marginBottom:-350
     },
     background:{
         backgroundColor: 'white',

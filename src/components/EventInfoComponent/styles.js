@@ -7,7 +7,7 @@ export default StyleSheet.create({
     header: {
         backgroundColor: '#1F4F4F',
         width: SIZES.width,
-        height: SIZES.height - 500,
+        height: SIZES.height - 550,
         paddingHorizontal:20
     },
     menu: {
@@ -29,7 +29,7 @@ export default StyleSheet.create({
         height: SIZES.height / 1.8,
         borderRadius: 20,
         backgroundColor: '#A6DBDB',
-        paddingHorizontal:20
+        paddingHorizontal:20,
     },
     img:{
         width:40,

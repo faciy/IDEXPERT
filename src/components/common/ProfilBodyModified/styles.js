@@ -53,7 +53,6 @@ export default StyleSheet.create({
         borderBottomColor:'#b3b3b3',
         borderBottomWidth:1,
         marginRight:20,
-        marginLeft:20,
-        padding:8
+        marginLeft:20
     },
 })

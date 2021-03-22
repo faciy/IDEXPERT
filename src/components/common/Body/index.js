@@ -23,7 +23,7 @@ const Body = () => {
     }
 
     const ButtonContact = () => {
-        console.log('buttonContact')
+        navigation.navigate('Contact')
     }
 
     return (

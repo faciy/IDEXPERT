@@ -11,7 +11,7 @@ const Checkbox = ({
 
         <View >
             <CheckBox
-                tintColors={{ true: 'white', false: 'black' }}
+                tintColors={{ true: 'white', false: 'white' }}
                 disabled={false}
                 value={value}
                 onValueChange={onValueChange}

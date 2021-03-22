@@ -28,7 +28,7 @@ export default StyleSheet.create({
     },
     minuter:{
         alignSelf:'center',
-        bottom:40
+        bottom:80
     },
    
    

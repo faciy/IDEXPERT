@@ -13,6 +13,7 @@ import contact from '../assets/images/contact.png';
 import { useNavigation } from '@react-navigation/native';
 import phonescan from '../assets/icons/phonescan.png';
 
+
 const Tab = createBottomTabNavigator();
 
 const tabOptions = {

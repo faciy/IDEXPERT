@@ -11,7 +11,7 @@ const EventInfoComponent = () => {
         <View>
             <View style={styles.header}>
                 <Navbar
-                    imageLogo={<Image 
+                     imageLogo={<Image 
                     style={styles.img}
                     source={imageLogo} />}
                     imageOther={<Image
@@ -22,7 +22,7 @@ const EventInfoComponent = () => {
                     <Text style={styles.text} >EVENEMENT</Text>
                 </View>
             </View>
-            <View style={styles.containerBody}>
+            <View style={styles  .containerBody}>
                     <View style={styles.body}>
                         <ListInfoEven />
                     </View>

@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { View, Image, Text, FlatList, TouchableOpacity } from 'react-native';
 import event from '../../../assets/images/even.png';
 import styles from './styles';
-import lock from '../../../assets/icons/cloche.png';
+// import lock from '../../../assets/icons/cloche.png';
 // import { useNavigation } from '@react-navigation/native';
-
+import calendrier from '../../../assets/icons/calendrier.png';
+import localisation from '../../../assets/icons/localisation.png';
 
 const ListInfoEven = () => {
     return (
@@ -39,7 +40,7 @@ const ListInfoEven = () => {
                                         width: 40,
                                         height: 40
                                     }}
-                                    source={lock}
+                                    source={calendrier}
                                 />
                             </View>
                             <View>
@@ -57,7 +58,7 @@ const ListInfoEven = () => {
                                         width: 40,
                                         height: 40
                                     }}
-                                    source={lock}
+                                    source={localisation}
                                 />
                             </View>
                             <View>

@@ -18,7 +18,7 @@ const ScanComponent = () => {
                         style={styles.menu}
                         source={Menu} />}
                 />
-                <View style={{marginTop:100}}>
+                <View style={{marginTop:50}}>
                     <Text style={styles.text} >Nom du cabinet</Text>
                 </View>
             </View>

@@ -3,15 +3,16 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import leftArrow from '../../../assets/icons/arrow.png';
 import photo from '../../../assets/images/photo.jpg';
-import edit from '../../../assets/icons/edit.png';
+import check from '../../../assets/icons/check.png';
+import camera from '../../../assets/icons/camera.png';
 import { useNavigation } from '@react-navigation/native';
 
-const ProfilHeader = () => {
+const ProfilHeaderModified = () => {
 
     const navigation = useNavigation();
 
-    const Modified = () => {
-        navigation.navigate('ProfilModified')
+    const Validate = () => {
+        // navigation.navigate('Profil')
     }
 
     return (
@@ -33,13 +34,13 @@ const ProfilHeader = () => {
                     <Text style={{color:'white'}} >PROFIL</Text>
                 </View>
                 <TouchableOpacity
-                onPress={() => Modified()}
+                onPress={() => {}}
                 >
                     <View style={{height:30,backgroundColor:'red',width:40,borderRadius:20,alignItems:'center',justifyContent:'center',backgroundColor:'#1F4F4F'}}>
                         
                             <Image
                             style={{width:20,height:20,tintColor:'white'}} 
-                            source={edit}
+                            source={check}
                             />
                     </View>
                 </TouchableOpacity>
@@ -49,9 +50,22 @@ const ProfilHeader = () => {
                 style={styles.img}
                 source={photo}
                 />
+                <View style={styles.camera}>
+                <TouchableOpacity
+                onPress={() => {}}
+                >
+                    <Image 
+                    style={{
+                        width:20,
+                        height:20,
+                        tintColor:'white'}}
+                    source={camera}
+                    />
+                </TouchableOpacity>
+                </View>
             </View>
         </View>
     )
 }
 
-export default ProfilHeader;
+export default ProfilHeaderModified;

@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
-import { View, ImageBackground, Text } from 'react-native'
-import bg from '../../assets/images/DeutscheBank.png';
+import { View, ImageBackground, Text, TextInput } from 'react-native'
+import fontH from '../../assets/images/fontH.png';
 import styles from './styles';
 import Rectangle from '../../assets/images/Rectangle.png';
 import Trace from '../../assets/images/Trace.png';
 import CardActivateScreenOne from '../common/ActivateScreenOne';
 import ButtonCustom from '../common/ButtonCustom';
-import Input from '../../components/common/Input';
+import { useNavigation } from '@react-navigation/native';
 
 
 const ActivateComponent = () => {
 
+    const navigation = useNavigation();
+
     const Continued = () => {
-        console.log('continuer')
+        navigation.navigate('HomeNavigator')
     }
 
     const Renvoyer = () => {
@@ -21,7 +23,7 @@ const ActivateComponent = () => {
 
     return (
         <View >
-            <ImageBackground source={bg} style={styles.background}>
+            <ImageBackground source={fontH} style={styles.background}>
                 <ImageBackground source={Rectangle} style={styles.rectangle}>
                     <ImageBackground source={Trace} style={styles.trace}>
                         <CardActivateScreenOne />
@@ -30,30 +32,37 @@ const ActivateComponent = () => {
                                 <Text style={{ color: '#0E787EE0' }}>01:00</Text>
                             </View>
                             <View style={styles.input}>
-                                <View style={{ bottom: 60 }} >
-                                    <Input
+                                <View style={{ bottom: 80 }} >
+                                    <TextInput 
+                                        placeholder='Saisir votre code de sécurité SMS'
                                         placeholderTextColor='#1F4F4F'
-                                        placeholder="Sasir votre code de sécurité SMS"
-                                    //  onChangeText={() => setPassword()}
+                                        style={{paddingHorizontal:20}}
                                     />
+                            
+                                    <View style={{borderBottomWidth:2,borderBottomColor:'#00000029',
+                                    marginHorizontal:20}}>
+
+                                    </View>
                                 </View>
                                 <View style={{ bottom: 80 }}>
-                                    <Input
+                                    <TextInput 
+                                        placeholder='Saisir votre code de sécurité MAIL'
                                         placeholderTextColor='#1F4F4F'
-                                        placeholder="Sasir votre code de sécurité MAIL"
-                                    //  onChangeText={() => setPassword()}
-                                    
+                                        style={{paddingHorizontal:20}}
                                     />
+                                    <View style={{borderBottomWidth:2,borderBottomColor:'#00000029',
+                                    marginHorizontal:20}}>
+                                    </View>
                                 </View>
                             </View>
                             <View>
-                                <View style={{bottom:100}}>
+                                <View style={{bottom:90}}>
                                     <ButtonCustom 
                                     onPress={() => Renvoyer()}
                                     text={<Text>Renvoyer</Text>}
                                     />
                                 </View>
-                                <View style={{bottom:130}}>
+                                <View style={{bottom:110}}>
                                     <ButtonCustom 
                                     onPress={() => Continued()}
                                     text={<Text>Continuer</Text>}

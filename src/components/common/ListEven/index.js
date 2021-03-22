@@ -13,7 +13,7 @@ const donnees = [
     {
         id: 2,
         image: event,
-        part:'Participer plus'
+        part:'Je participer plus'
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const donnees = [
     {
         id: 4,
         image: event,
-        part:'Participer plus'
+        part:'Je participer plus'
     },
     {
         id: 5,

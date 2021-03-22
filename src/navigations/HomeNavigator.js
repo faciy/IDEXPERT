@@ -4,6 +4,8 @@ import Home from '../screens/Home';
 import TabBottomNavigator from '../navigations/TabBottomNavigator';
 import NotificationNavigation from '../navigations/NotificationNavigation';
 import Profil from '../screens/Profil';
+import ProfilModified from '../screens/ProfilModified';
+import Contact from '../screens/Contact';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +24,9 @@ const HomeNavigator = () => {
             name="NotificationNavigation" 
             component={NotificationNavigation} />
             <Stack.Screen name="Profil" component={Profil} />
+            <Stack.Screen name="Contact" component={Contact} />
+            <Stack.Screen name="ProfilModified" component={ProfilModified} />
+
         </Stack.Navigator>
     )
 }

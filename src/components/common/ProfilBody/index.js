@@ -19,67 +19,37 @@ const ProfilBody = () => {
                 <View>
                     <Text style={styles.text} >Nom et Prénoms</Text>
                         <View style={styles.input}>
-                            <Input
-                                placeholderTextColor='black'
-                                placeholder="Franck Boni"
-                                onChangeText={() => setName()}
-                                style={styles.textInput}
-                            />
+                           <Text>Franck Boni</Text>
                         </View>
                 </View>
                 <View>
                     <Text style={styles.text}>Adresse</Text>
                 <View style={styles.input}>
-                    <Input
-                        placeholderTextColor='black'
-                        placeholder="Koumassi"
-                        onChangeText={() => setAdresse()}
-                        style={styles.textInput}
-                    />
+                    <Text>Koumassi</Text>
                 </View>
                 </View>
                 <View>
                     <Text style={styles.text}>Ville</Text>
                 <View style={styles.input}>
-                    <Input
-                        placeholderTextColor='black'
-                        placeholder="Abidjan"
-                        onChangeText={() => setVille()}
-                        style={styles.textInput}
-                    />
+                    <Text>Abidjan</Text>
                 </View>
                 </View>
                 <View>
                     <Text style={styles.text}>Genre</Text>
                 <View style={styles.input}>
-                    <Input
-                        placeholderTextColor='black'
-                        placeholder="Masculin"
-                        onChangeText={() => setGenre()}
-                        style={styles.textInput}
-                    />
+                    <Text>Masculin</Text>
                 </View>
                 </View>
                 <View>
                     <Text style={styles.text}>Email</Text>
                 <View style={styles.input}>
-                    <Input
-                        placeholderTextColor='black'
-                        placeholder="boni@gmail.com"
-                        onChangeText={() => setEmail()}
-                        style={styles.textInput}
-                    />
+                    <Text>Boni@gmail.com</Text>
                 </View>
                 </View>
                 <View>
                     <Text style={styles.text}>Numéro</Text>
                 <View style={styles.input}>
-                    <Input
-                        placeholderTextColor='black'
-                        placeholder="68060990"
-                        onChangeText={() => setNumber()}
-                        style={styles.textInput}
-                    />
+                    <Text>68060990</Text>
                 </View>
                 </View>
             </View>
