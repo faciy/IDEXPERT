@@ -2,47 +2,47 @@ import {
     StyleSheet
 } from 'react-native';
 import { SIZES } from '../../../assets/theme';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
     container: {
-        marginTop: 5,
-        bottom:10,
-        top:-10,
+        width: wp('80%'),
+        // height:hp('3%'),
+        // backgroundColor:'red'
     },
     card: {
         flexDirection:'row',
-        justifyContent:'space-between'
+        justifyContent:'space-evenly'
     },
     cardOne: {
         backgroundColor: '#1F4F4F',
-        width: 130,
-        height: 100,
+        width:wp('35%'),
+        // height:hp('5%'),
+        padding:wp('5%'),
+        margin:hp('1%'),
         borderTopLeftRadius:20
     },
     cardTwo: {
         backgroundColor: '#1F4F4F',
-        width: 130,
-        height: 100,
+        width:wp('35%'),
+        // height:hp('5%'),
+        padding:wp('5%'),
+        margin:hp('1%'),
         borderTopRightRadius:20
     },
     bar:{
         borderBottomWidth:1,
         borderBottomColor:'white',
+        marginStart:wp('-5%'),
+        marginEnd:wp('-5%')
     },
     text:{
         textAlign:'center',
-        top:-5,
         color:'white'
-    },
-    containerText:{
-        marginTop:10,
-        paddingHorizontal:20
     },
     containerSujet:{
         marginTop:10,
-        paddingHorizontal:10
+        paddingHorizontal:wp('0%')
     },
-    containerLorem:{
-        paddingHorizontal:10
-    }
+    
 })

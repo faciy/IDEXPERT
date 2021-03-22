@@ -1,10 +1,11 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../screens/Home';
+// import Home from '../screens/Home';
 import TabBottomNavigator from '../navigations/TabBottomNavigator';
 import NotificationNavigation from '../navigations/NotificationNavigation';
 import Profil from '../screens/Profil';
 import ProfilModified from '../screens/ProfilModified';
+// import DrawerNavigation from './DrawerNavigation';
 import Contact from '../screens/Contact';
 
 const Stack = createStackNavigator();
@@ -16,7 +17,9 @@ const HomeNavigator = () => {
                 headerShown:false
             }}
         >
+            {/* <Stack.Screen name="TabBottomNavigator" component={TabBottomNavigator} /> */}
             <Stack.Screen name="TabBottomNavigator" component={TabBottomNavigator} />
+            {/* <Stack.Screen name="DrawerNavigation" component={DrawerNavigation} /> */}
             <Stack.Screen 
             options={{
                 tabBarLabel: 'Notification'

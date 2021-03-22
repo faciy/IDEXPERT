@@ -1,25 +1,24 @@
 import React from 'react'
-import { View, Image, Text, FlatList } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import Navbar from '../common/Navbar';
 import styles from './styles';
 import imageLogo from '../../assets/icons/logoIdExpert.png';
 import Menu from '../../assets/icons/menu.png';
-import NotificationList from '../../components/common/NotificationList';
+import NotificationList from '../common/NotificationList';
 
 const NotificationComponent = () => {
-
     return (
         <View>
             <View style={styles.header}>
                 <Navbar
-                    imageLogo={<Image 
-                    style={styles.img}    
+                     imageLogo={<Image 
+                    style={styles.img}
                     source={imageLogo} />}
                     imageOther={<Image
                         style={styles.menu}
                         source={Menu} />}
                 />
-                <View style={{marginTop:50}}>
+                <View style={{marginTop:20}}>
                     <Text style={styles.text} >NOTIFICATION</Text>
                 </View>
             </View>

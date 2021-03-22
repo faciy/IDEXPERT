@@ -2,12 +2,12 @@ import {
     StyleSheet
 } from 'react-native';
 import { SIZES } from '../../assets/theme';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
     header: {
         backgroundColor: '#1F4F4F',
         width: SIZES.width,
-        height: SIZES.height - 550,
         paddingHorizontal:20
     },
     menu: {
@@ -16,20 +16,21 @@ export default StyleSheet.create({
     },
     text:{
         color: 'white',
-        textAlign:'center' 
+        textAlign:'center' ,
+        bottom:10
     },
     containerBody:{
         backgroundColor:'#215D5D',
-        width:SIZES.width,
-        height:SIZES.height,
-        paddingHorizontal:20
+        height: hp('100%'),
+        width: wp('100%'),
+        paddingHorizontal: wp('5%')
     },
     body:{
         marginTop: 30,
-        height: SIZES.height / 1.8,
+        height: hp('65%'),
         borderRadius: 20,
         backgroundColor: '#A6DBDB',
-        paddingHorizontal:20,
+        padding:wp('5%'),
     },
     img:{
         width:40,

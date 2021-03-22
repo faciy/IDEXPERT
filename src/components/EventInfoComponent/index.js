@@ -18,11 +18,11 @@ const EventInfoComponent = () => {
                         style={styles.menu}
                         source={Menu} />}
                 />
-                <View style={{marginTop:50}}>
+                <View style={{marginTop:20}}>
                     <Text style={styles.text} >EVENEMENT</Text>
                 </View>
             </View>
-            <View style={styles  .containerBody}>
+            <View style={styles.containerBody}>
                     <View style={styles.body}>
                         <ListInfoEven />
                     </View>

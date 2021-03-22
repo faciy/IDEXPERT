@@ -3,32 +3,33 @@ import { View, Image, Text, FlatList, TouchableOpacity } from 'react-native';
 import event from '../../../assets/images/even.png';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const donnees = [
     {
         id: 1,
         image: event,
-        part:'Participer'
+        part: 'Participer'
     },
     {
         id: 2,
         image: event,
-        part:'Je participer plus'
+        part: 'Je participe plus'
     },
     {
         id: 3,
         image: event,
-        part:'Participer'
+        part: 'Participer'
     },
     {
         id: 4,
         image: event,
-        part:'Je participer plus'
+        part: 'Je participe plus'
     },
     {
         id: 5,
         image: event,
-        part:'Participer'
+        part: 'Participer'
     }
 
 ]
@@ -46,38 +47,37 @@ const ListEven = () => {
 
     const renderItem = ({ item }) => {
         return (
-            <View>
-                <View>
+            <View style={styles.form}>
                 <TouchableOpacity
-                onPress={() => EventButton()}
+                    onPress={() => EventButton()}
                 >
                     <Image
                         style={styles.image}
                         source={item.image}
                     />
                 </TouchableOpacity>
-                    <View style={styles.imageCard}>
-                        <View style={styles.containeDate}>
-                            <Text style={styles.date}>10</Text>
-                            <Text style={styles.date}>MARS</Text>
-                        </View>
-                        {/* bar  */}
-                        <View style={styles.bar}></View>
-                        <TouchableOpacity
-                            style={styles.button}
-                            onPress={() => {}}
-                            >
-                                <Text style={styles.textButton}>{item.part}</Text>
-                        </TouchableOpacity>
 
-                        <View style={styles.infoEven}>
-                            <Text numberOfLines={1} style={styles.infoText}>
-                                Titre de l'évènement
+                <View style={styles.card}>
+                    <View style={styles.containeDate}>
+                        <Text style={styles.date}>10</Text>
+                        <Text style={styles.date}>MARS</Text>
+                    </View>
+                    {/* bar  */}
+                    <View style={styles.bar}></View>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => { }}
+                    >
+                        <Text style={styles.textButton}>{item.part}</Text>
+                    </TouchableOpacity>
+
+                    <View style={styles.infoEven}>
+                        <Text numberOfLines={1} style={styles.infoText}>
+                            Titre de l'évènement
                             </Text>
-                            <Text numberOfLines={2} style={styles.infoText}>
-                                Le lorem ipsum est, en imprimerie, une suite de mots sans signification rgG
+                        <Text numberOfLines={1} style={styles.infoText}>
+                            Le lorem ipsum est, en imprimerie,une suite de mots sans signification rgG
                            </Text>
-                        </View>
                     </View>
                 </View>
             </View>
@@ -90,6 +90,10 @@ const ListEven = () => {
                 data={data}
                 renderItem={renderItem}
                 keyExtractor={item => `${item.id}`}
+                contentContainerStyle={{
+                    // padding: 6,
+                    right: 5
+                }}
             />
         </View>
     )

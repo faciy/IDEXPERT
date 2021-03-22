@@ -11,14 +11,14 @@ const EvenementComponent = () => {
         <View>
             <View style={styles.header}>
                 <Navbar
-                    imageLogo={<Image 
-                    style={styles.img}    
+                     imageLogo={<Image 
+                    style={styles.img}
                     source={imageLogo} />}
                     imageOther={<Image
                         style={styles.menu}
                         source={Menu} />}
                 />
-                <View style={{marginTop:50}}>
+                <View style={{marginTop:20}}>
                     <Text style={styles.text} >EVENEMENT</Text>
                 </View>
             </View>

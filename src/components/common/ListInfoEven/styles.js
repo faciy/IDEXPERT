@@ -2,21 +2,19 @@ import {
     StyleSheet
 } from 'react-native';
 import { SIZES } from '../../../assets/theme';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
     image:{
-        width: '100%', 
-        height: 100, 
-        marginTop: 20, 
+        width: wp('80%'),
+        height: hp('20%') , 
         borderTopRightRadius: 20, 
         borderTopLeftRadius: 20
     },
-    imageCard:{
-        width: '100%',
-        height: 260,
-        backgroundColor: '#1F4F4F', 
-        paddingLeft: 20,
-        paddingTop:20        
+    card:{
+        width: wp('80%'),
+        height: hp('40%'),
+        backgroundColor: '#1F4F4F',       
     },
     containerDate:{
         paddingLeft: 10, 
@@ -58,6 +56,9 @@ export default StyleSheet.create({
     },
     textColor:{
         color:'#155F9F'
+    },
+    infoText:{
+        padding:wp('5%')
     }
     
    
