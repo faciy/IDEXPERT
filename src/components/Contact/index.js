@@ -1,12 +1,17 @@
 import React from 'react'
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Navbar from '../common/Navbar';
 import styles from './styles';
 import imageLogo from '../../assets/icons/logoIdExpert.png';
 import Menu from '../../assets/icons/menu.png';
 import ContactList from '../common/ContactList';
+import { useNavigation } from '@react-navigation/native';
+import { DrawerActions } from '@react-navigation/native';
 
 const ContactComponent = () => {
+
+    const navigation = useNavigation();
+
     return (
         <View>
             <View style={styles.header}>
@@ -14,9 +19,17 @@ const ContactComponent = () => {
                      imageLogo={<Image 
                     style={styles.img}
                     source={imageLogo} />}
-                    imageOther={<Image
-                        style={styles.menu}
-                        source={Menu} />}
+                    imageLogo={<Image
+                        style={styles.img}
+                        source={imageLogo} />}
+                    imageOther={
+                        <TouchableOpacity
+                            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+                        >
+                            <Image
+                                style={styles.menu}
+                                source={Menu} />
+                        </TouchableOpacity>}
                 />
                 <View style={{marginTop:20}}>
                     <Text style={styles.text} >LISTE DES CONTACTS</Text>

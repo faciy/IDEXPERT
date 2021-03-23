@@ -9,6 +9,7 @@ import logo from '../../assets/icons/logoIdExpert.png';
 import notification from '../../assets/icons/notification.png';
 import iconMail from '../../assets/icons/iconMail.png';
 import { useNavigation } from '@react-navigation/native';
+import bell from '../../assets/icons/bell.png';
 
 const HomeComponent = () => {
     const navigation = useNavigation();
@@ -38,7 +39,7 @@ const HomeComponent = () => {
                     />}
                     imageOther={<Image
                         style={styles.notification}
-                        source={notification}
+                        source={bell}
                     />}
                     onPress={() => ButtonNotif()}
                 />

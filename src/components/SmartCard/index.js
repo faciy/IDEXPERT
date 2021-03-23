@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, ImageBackground, Image } from 'react-native';
+import { View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import imagefond from '../../assets/images/imagefond.png';
 import styles from './styles';
 import Navbar from '../common/Navbar';
@@ -8,9 +8,15 @@ import Menu from '../../assets/icons/menu.png';
 import ProfilPhoto from '../common/ProfilPhoto';
 import photo from '../../assets/images/photo.jpg';
 import QrCode from '../common/QrCode';
-import Qrcode from '../../assets/images/Qrcode.png'
+import Qrcode from '../../assets/images/Qrcode.png';
+import { DrawerActions } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+
 
 const SmartCardComponent = () => {
+
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container} >
             <ImageBackground source={imagefond} style={styles.background}>
@@ -18,9 +24,14 @@ const SmartCardComponent = () => {
                 imageLogo={<Image 
                     style={styles.img}
                     source={imageLogo} />}
-                imageOther={<Image 
+                imageOther={
+            <TouchableOpacity
+            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+            >
+                 <Image 
                     style={styles.menu}
-                    source={Menu} />}
+                    source={Menu} />
+            </TouchableOpacity>}
                 />
                 <ProfilPhoto 
                 imageProfil={<Image

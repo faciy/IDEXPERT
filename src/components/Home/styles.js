@@ -19,7 +19,8 @@ export default StyleSheet.create({
     },
     notification:{
         width:30,
-        height:30
+        height:30,
+        tintColor:'white'
     },
       modal:{
           height:400,

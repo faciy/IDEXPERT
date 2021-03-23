@@ -49,6 +49,7 @@ export default StyleSheet.create({
     },
     input:{
         flexDirection:'row',
+        justifyContent:'space-between',
         alignItems:'center',
         borderBottomColor:'#b3b3b3',
         borderBottomWidth:1,

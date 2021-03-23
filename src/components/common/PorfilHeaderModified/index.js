@@ -12,14 +12,14 @@ const ProfilHeaderModified = () => {
     const navigation = useNavigation();
 
     const Validate = () => {
-        // navigation.navigate('Profil')
+        navigation.navigate('Profil')
     }
 
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
                 <TouchableOpacity
-                onPress={() => {}}
+                onPress={() => navigation.goBack()}
                 >
                     <Image 
                         style={{
@@ -34,7 +34,7 @@ const ProfilHeaderModified = () => {
                     <Text style={{color:'white'}} >PROFIL</Text>
                 </View>
                 <TouchableOpacity
-                onPress={() => {}}
+                onPress={() => Validate()}
                 >
                     <View style={{height:30,backgroundColor:'red',width:40,borderRadius:20,alignItems:'center',justifyContent:'center',backgroundColor:'#1F4F4F'}}>
                         

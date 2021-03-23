@@ -12,7 +12,8 @@ export default StyleSheet.create({
     },
     menu: {
         width: 30,
-        height: 30
+        height: 30,
+        tintColor:'white'
     },
     text:{
         color: 'white',

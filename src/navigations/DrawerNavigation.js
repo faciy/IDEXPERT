@@ -1,14 +1,15 @@
 import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import SmartCard from '../screens/SmartCard';
-import TabBottomNavigator from './TabBottomNavigator';
+import HomeNavigator from './HomeNavigator';
+import DrawerContent from '../components/DrawerContent';
+
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
     return (
-        <Drawer.Navigator>
-            <Drawer.Screen name="TabBottomNavigator" component={TabBottomNavigator} />
+        <Drawer.Navigator  drawerContent={props => <DrawerContent {...props} />}>
+            <Drawer.Screen name="HomeNavigator" component={HomeNavigator} />
         </Drawer.Navigator>
     )
 }

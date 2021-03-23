@@ -18,7 +18,7 @@ const ProfilHeader = () => {
         <View style={styles.container}>
             <View style={styles.navbar}>
                 <TouchableOpacity
-                onPress={() => {}}
+                onPress={() => navigation.goBack()}
                 >
                     <Image 
                         style={{

@@ -27,7 +27,6 @@ const HomeNavigator = () => {
             name="NotificationNavigation" 
             component={NotificationNavigation} />
             <Stack.Screen name="Profil" component={Profil} />
-            <Stack.Screen name="Contact" component={Contact} />
             <Stack.Screen name="ProfilModified" component={ProfilModified} />
 
         </Stack.Navigator>
