@@ -14,7 +14,7 @@ const ActivateComponent = () => {
     const navigation = useNavigation();
 
     const Continued = () => {
-        navigation.navigate('HomeNavigator')
+        navigation.navigate('DrawerNavigation')
     }
 
     const Renvoyer = () => {

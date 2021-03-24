@@ -14,10 +14,10 @@ export default StyleSheet.create({
         borderBottomWidth: 2, 
         marginLeft: 20, 
         marginRight: 20, 
-        bottom: 10
+        bottom: 20,
     },
     contain:{
-        paddingHorizontal:20
+        // paddingHorizontal:20,
     },
     accordion:{
         bottom: -18, 

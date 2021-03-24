@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Image, ImageBackground, Text, Button } from 'react-native'
+import { View, Image, ImageBackground, Text, Button, TextInput } from 'react-native'
 import Input from '../common/Input';
 import bg from '../../assets/images/DeutscheBank.png';
 import styles from './styles';
@@ -17,8 +17,9 @@ const LoginComponent = () => {
 
     const navigation = useNavigation();
 
-    const [email, setEmail] = useState('')
-    const [pasword, setPassword] = useState('')
+    const [email, setEmail] = useState('charles@gmail.com');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('erreur')
     const [isSelected, setSelection] = useState(true);
 
     const ButtonForget = () => {
@@ -26,7 +27,8 @@ const LoginComponent = () => {
     }
 
     const ButtonConnexion = () => {
-        navigation.navigate("DrawerNavigation")
+        alert('essaie', email)
+        // navigation.navigate("DrawerNavigation")  
     }
 
     const Register = () => {
@@ -40,9 +42,9 @@ const LoginComponent = () => {
                     <ImageBackground source={Trace} style={styles.trace}>
                         {/* logoIdExpert  */}
                         <View style={styles.logo} >
-                            <Image 
-                            style={styles.img}
-                            source={logo} />
+                            <Image
+                                style={styles.img}
+                                source={logo} />
                         </View>
                         <Text style={styles.textConnexion}>Connexion</Text>
                         {/* Input */}
@@ -50,10 +52,10 @@ const LoginComponent = () => {
                             <Input
                                 icon={<Image source={logoEmail} />}
                                 placeholderTextColor='#FFFFFF64'
-                                placeholder="E-mail | Nom d'utilisateur"
-                                onChangeText={() => setEmail()}
+                                placeholder="E-mail | Nom d'utilisateur" onChangeText={() => setEmail()}
                                 style={styles.textInput}
                             />
+                            <Text style={styles.error}>{error}</Text>
                             <Input
                                 icon={<Image source={logoLock} />}
                                 placeholderTextColor='#FFFFFF64'

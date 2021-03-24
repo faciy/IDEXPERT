@@ -51,12 +51,12 @@ const RegisterComponent = () => {
                                 onChangeText={() => setEmail()}
                                 style={styles.textInput}
                             />
-                            <View >
+                            <ScrollView >
                                 <ListPays 
                                 num = {number}
                                 setNum={setNumber}
                                 />
-                            </View>
+                            </ScrollView>
                             <Input
                                 icon={<Image
                                     source={phone} />}

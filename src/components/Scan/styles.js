@@ -8,7 +8,7 @@ export default StyleSheet.create({
   header: {
     backgroundColor: '#1F4F4F',
     width: SIZES.width,
-    height: SIZES.height - 550,
+    height: hp('20%'),
     paddingHorizontal: 20
   },
   menu: {
@@ -26,22 +26,12 @@ export default StyleSheet.create({
   scan: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: hp('8%')
+    marginTop:hp('-74%'),
   },
   img: {
     width: 40,
     height: 40,
     alignSelf: 'center'
-  },
-  centerText: {
-    flex: 1,
-    fontSize: 18,
-    padding: 32,
-    color: '#777'
-  },
-  textBold: {
-    fontWeight: '500',
-    color: '#000'
   },
   buttonText: {
     fontSize: 21,

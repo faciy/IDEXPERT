@@ -111,18 +111,21 @@ const  ScanComponent = () => {
                                     source={Menu} />
                             </TouchableOpacity>}
                     />
-                    <View style={{marginTop:50}}>
+                    <View style={{marginTop:30}}>
                         <Text style={styles.text} >Nom du cabinet</Text>
                     </View>
                 </View>
                 {/* code scan  */}
                     <View style={styles.scan} >
-                        <QRCodeScanner
-                        onRead={onSuccess}
-                        ref={scanner}
-                        showMarker={true}
-                        reactivate={true}
-                        />
+                        <View style={styles.qrScanner}>
+                            <QRCodeScanner
+                            onRead={onSuccess}
+                            ref={scanner}
+                            showMarker={true}
+                            reactivate={true}
+                            bottomViewStyle={{backgroundColor:'#1F4F4F',top:60}}
+                            />
+                        </View>
                     </View>
                 </View>
         )

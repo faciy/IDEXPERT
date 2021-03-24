@@ -12,7 +12,8 @@ export default StyleSheet.create({
     },
     card: {
         flexDirection:'row',
-        justifyContent:'space-evenly'
+        justifyContent:'space-evenly',
+        flexWrap:'wrap'
     },
     cardOne: {
         backgroundColor: '#1F4F4F',
@@ -29,6 +30,30 @@ export default StyleSheet.create({
         padding:wp('5%'),
         margin:hp('1%'),
         borderTopRightRadius:20
+    },
+    cardThree: {
+        backgroundColor: '#1F4F4F',
+        width:wp('35%'),
+        // height:hp('5%'),
+        padding:wp('5%'),
+        margin:hp('1%'),
+        // borderTopRightRadius:20
+    },
+    cardNine: {
+        backgroundColor: '#1F4F4F',
+        width:wp('35%'),
+        // height:hp('5%'),
+        padding:wp('5%'),
+        margin:hp('1%'),
+        borderBottomLeftRadius:20
+    },
+    cardTen: {
+        backgroundColor: '#1F4F4F',
+        width:wp('35%'),
+        // height:hp('5%'),
+        padding:wp('5%'),
+        margin:hp('1%'),
+        borderBottomRightRadius:20
     },
     bar:{
         borderBottomWidth:1,
