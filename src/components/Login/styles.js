@@ -63,6 +63,19 @@ export default StyleSheet.create({
     },
     oeil:{
         left:140
+    },
+    eye:{
+        tintColor:'white',
+        width:20,
+        height:20, 
+        tintColor:'#FFFFFF64',
+        marginStart:20
+    },
+    invisible:{
+        tintColor:'white',
+        width:20,
+        height:20, 
+        tintColor:'#FFFFFF64'
     }
     
    

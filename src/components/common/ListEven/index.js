@@ -92,7 +92,7 @@ const ListEven = () => {
                 keyExtractor={item => `${item.id}`}
                 contentContainerStyle={{
                     // padding: 6,
-                    right: 5
+                    right: 6
                 }}
             />
         </View>

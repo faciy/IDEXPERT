@@ -30,7 +30,7 @@ export default StyleSheet.create({
 
     },
     infoEven:{
-       
+       padding:wp('5%')
     },
     bar:{
         height:hp('10%'),
@@ -57,11 +57,12 @@ export default StyleSheet.create({
         alignItems:'center'
     },
     infoEven:{
-        padding:wp('2%')
+        padding:10
     },
     infoText:{
         color:'white'
     },
+    
    
     
    

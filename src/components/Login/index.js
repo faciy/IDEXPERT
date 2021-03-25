@@ -62,8 +62,7 @@ const LoginComponent = () => {
             navigation.navigate("DrawerNavigation")  
         }else{
             setError(true)
-        }
-        
+        } 
     }
 
     const Register = () => {
@@ -106,12 +105,11 @@ const LoginComponent = () => {
                                 onPress={() => secureTextEntry ? setSecureTextEntry(false) : setSecureTextEntry(true)}
                                 >
                                     {secureTextEntry ? <Image 
-                                    style={{tintColor:'white',width:20,height:20}}
+                                    style={styles.invisible}
                                     source={invisible}
                                     /> : <Image 
-                                    style={{tintColor:'white',width:20,height:20,left:20}}
-                                    source={eye} />}
-                                    
+                                    style={styles.eye}
+                                    source={eye} />}  
                                 </TouchableOpacity>}
                             />
                         </View>
@@ -142,7 +140,6 @@ const LoginComponent = () => {
                 </ImageBackground>
             </ImageBackground>
         </View>
-
     )
 }
 

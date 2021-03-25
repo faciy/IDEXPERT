@@ -12,6 +12,8 @@ import calendar from '../assets/icons/calendar.png';
 import contact from '../assets/images/contact.png';
 import { useNavigation } from '@react-navigation/native';
 import phonescan from '../assets/icons/phonescan.png';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -29,25 +31,22 @@ const TabBottomNavigator = () => {
 
     return (
         <Tab.Navigator
-        
         initialRouteName='Home'
             tabBarOptions={tabOptions}
             screenOptions={({ route }) => ({
-                tabBarIcon: ({ focused }) => {
-                    
+                tabBarIcon: ({ focused }) => {     
                     switch (route.name) {
                         case "Home":
                             return (
-                                <TouchableOpacity
-                                onPress={() => navigation.reset({
-                                    routes: [{ name: 'Home' }],
-                                  })}
-                                >
-                                    <View style={{
+                               
+                                    <TouchableOpacity style={{
                                     backgroundColor: '#1F4F4F',
                                     width: 60, height: 60, bottom: 20,
                                     borderRadius: 80
-                                }}>
+                                }}
+                                onPress={() => navigation.reset({
+                                    routes: [{ name: 'Home' }],
+                                  })}>
                                    
                                     <View style={{
                                         backgroundColor: '#127171',
@@ -65,9 +64,9 @@ const TabBottomNavigator = () => {
                                                 top: 8
                                             }}
                                         />
-                                    </View>
-                                </View>
+                                    </View> 
                                 </TouchableOpacity>
+                    
                                
                             )
                         case "SmartCard":
@@ -126,20 +125,19 @@ const TabBottomNavigator = () => {
                 component={SmartCard}
             />
             <Tab.Screen
-                
                 name="Scan"
                 component={Scan}
             />
             <Tab.Screen
                 options={{
-                    tabBarLabel: ''
+                    tabBarLabel: '',
                 }}
                 name="Home"
                 component={Home}
             />
             <Tab.Screen
                 options={{
-                    tabBarLabel: 'Evenement'
+                    tabBarLabel: 'Evenement',
                 }}
                 name="EvenementNavigation"
                 component={EvenementNavigation}
