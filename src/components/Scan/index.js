@@ -81,7 +81,7 @@ const  ScanComponent = () => {
                             onPress={() => {}}
                             style={styles.btn}
                             >
-                                <Text style={styles.textRenvoyer}>Renvoyer</Text>
+                                <Text style={styles.textRenvoyer}>Retour</Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity
@@ -124,6 +124,7 @@ const  ScanComponent = () => {
                             showMarker={true}
                             reactivate={true}
                             bottomViewStyle={{backgroundColor:'#1F4F4F',top:60}}
+                            top={{backgroundColor:'#1F4F4F'}}
                             />
                         </View>
                     </View>

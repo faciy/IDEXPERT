@@ -5,7 +5,7 @@ import { SIZES } from '../../../assets/theme';
 
 export default StyleSheet.create({
     btn: {
-        marginTop: 40,
+        marginTop: 30,
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: SIZES.padding,

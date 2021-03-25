@@ -6,7 +6,7 @@ export default StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 200
+        marginTop: 150
     }
 
 })

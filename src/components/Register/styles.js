@@ -39,7 +39,6 @@ export default StyleSheet.create({
     },
     textInput:{
         paddingLeft: 15,
-        color:'white'
     },
     img:{
         width:60,

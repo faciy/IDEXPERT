@@ -30,6 +30,13 @@ export default StyleSheet.create({
         alignSelf:'center',
         bottom:80
     },
+    block:{
+        width:30,
+        height:30
+    },
+    decompte:{
+        color:'green'
+    }
    
    
 })

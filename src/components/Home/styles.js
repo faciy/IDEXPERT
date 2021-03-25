@@ -125,8 +125,13 @@ export default StyleSheet.create({
         color:'white',
         left:100,
         textDecorationLine:'underline'
+    },
+    badge:{
+        position:'absolute',
+        left:15,
+        bottom:15, 
+        backgroundColor:'green'
     }
-
     
       
 })

@@ -10,6 +10,7 @@ import notification from '../../assets/icons/notification.png';
 import iconMail from '../../assets/icons/iconMail.png';
 import { useNavigation } from '@react-navigation/native';
 import bell from '../../assets/icons/bell.png';
+import { Badge } from 'react-native-paper';
 
 const HomeComponent = () => {
     const navigation = useNavigation();
@@ -37,10 +38,15 @@ const HomeComponent = () => {
                         style={styles.logo}
                         source={logo}
                     />}
-                    imageOther={<Image
+                    imageOther={
+                    <View>
+                    <Image
                         style={styles.notification}
                         source={bell}
-                    />}
+                    />
+                     <Badge style={styles.badge}>3</Badge>
+                    </View>
+                    }
                     onPress={() => ButtonNotif()}
                 />
                 <Header
@@ -110,10 +116,7 @@ const HomeComponent = () => {
                                 </TouchableOpacity>
                             </Modal>
                         </TouchableOpacity>
-                    
                     }
-                        
-
                 />
                 <Body />
             </View>

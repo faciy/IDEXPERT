@@ -9,7 +9,8 @@ const Input = ({
     icon,
     style,
     iconList,
-    initial
+    initial,
+    value
 }) => {
     return (
         <View style={styles.container}>
@@ -22,6 +23,7 @@ const Input = ({
                     placeholderTextColor={placeholderTextColor}
                     style={style}
                     onChangeText={onChangeText}
+                    value={value}
                 />
                 {iconList}
             </View>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, Image, ImageBackground, Text, Button, TextInput } from 'react-native'
 import Input from '../common/Input';
 import bg from '../../assets/images/DeutscheBank.png';
@@ -17,18 +17,50 @@ const LoginComponent = () => {
 
     const navigation = useNavigation();
 
-    const [email, setEmail] = useState('charles@gmail.com');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('erreur')
+    const [error, setError] = useState(false)
     const [isSelected, setSelection] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setError(false)
+        }, 5000);
+    })
+
+    const Colorsmail = () => {
+        if(error){
+            return 'red'
+        }else if(email == 'charles'){
+            return 'green'
+        }else{
+            return 'white'
+        }
+    }
+
+    const ColorsPass = () => {
+        if(error){
+            return 'red'
+        }else if(password == 'charles'){
+            return 'green'
+        }else{
+            return 'white'
+        }
+    }
 
     const ButtonForget = () => {
         console.log('ok')
     }
 
     const ButtonConnexion = () => {
-        alert('essaie', email)
-        // navigation.navigate("DrawerNavigation")  
+        if(email == 'charles' && password == 'charles'){
+            setEmail('')
+            setPassword('')
+            navigation.navigate("DrawerNavigation")  
+        }else{
+            setError(true)
+        }
+        
     }
 
     const Register = () => {
@@ -47,21 +79,24 @@ const LoginComponent = () => {
                                 source={logo} />
                         </View>
                         <Text style={styles.textConnexion}>Connexion</Text>
+                        {error ? <Text style={styles.error}>Veuillez entrez vos informations</Text> : null}
                         {/* Input */}
                         <View>
                             <Input
                                 icon={<Image source={logoEmail} />}
                                 placeholderTextColor='#FFFFFF64'
-                                placeholder="E-mail | Nom d'utilisateur" onChangeText={() => setEmail()}
-                                style={styles.textInput}
+                                placeholder="E-mail | Nom d'utilisateur" onChangeText={(email) => setEmail(email)}
+                                style={[styles.textInput, {color:Colorsmail()}]}
+                                value={email}
                             />
-                            <Text style={styles.error}>{error}</Text>
+                            
                             <Input
                                 icon={<Image source={logoLock} />}
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Mot de passe"
-                                onChangeText={() => setPassword()}
-                                style={styles.textInput}
+                                onChangeText={(password) => setPassword(password)}
+                                style={[styles.textInput, {color:ColorsPass()}]}
+                                value={password}
                             />
                         </View>
                         <View style={styles.checkboxAndForgetButton}>
@@ -78,7 +113,7 @@ const LoginComponent = () => {
                         <View>
                             <ButtonCustom
                                 text={<Text>Connexion</Text>}
-                                onPress={() => ButtonConnexion()} />
+                                onPress={() => ButtonConnexion(email, password)} />
                         </View>
                         {/* ButtonRegister */}
                         <View style={styles.registerButton}>

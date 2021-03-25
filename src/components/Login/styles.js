@@ -50,7 +50,6 @@ export default StyleSheet.create({
     },
     textInput:{
         paddingLeft: 15,
-        color:'white'
     },
     img:{
         width:60,
@@ -58,8 +57,9 @@ export default StyleSheet.create({
         alignSelf:'center'
     },
     error:{
-        color:'white',
-        paddingHorizontal:20
+        color:'red',
+        textAlign:'center',
+        top:10
     }
     
    

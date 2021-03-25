@@ -38,17 +38,17 @@ const TabBottomNavigator = () => {
                     switch (route.name) {
                         case "Home":
                             return (
-                                
+                                <TouchableOpacity
+                                onPress={() => navigation.reset({
+                                    routes: [{ name: 'Home' }],
+                                  })}
+                                >
                                     <View style={{
                                     backgroundColor: '#1F4F4F',
                                     width: 60, height: 60, bottom: 20,
                                     borderRadius: 80
                                 }}>
-                                    <TouchableOpacity
-                                onPress={() => navigation.reset({
-                                    routes: [{ name: 'Home' }],
-                                  })}
-                                >
+                                   
                                     <View style={{
                                         backgroundColor: '#127171',
                                         borderRadius: 100, width: 40, height: 40, alignSelf: 'center',
@@ -66,8 +66,8 @@ const TabBottomNavigator = () => {
                                             }}
                                         />
                                     </View>
-                                    </TouchableOpacity>
                                 </View>
+                                </TouchableOpacity>
                                
                             )
                         case "SmartCard":

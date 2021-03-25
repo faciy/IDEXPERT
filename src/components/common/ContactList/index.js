@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { View, Text, FlatList, ScrollView } from 'react-native';
+import { View, Text, FlatList, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 
 // const donnees = [
@@ -77,7 +78,7 @@ const ContactList = () => {
     //     )
     // }
 
-
+    const navigation = useNavigation();
     return (
         <View>
             {/* <FlatList
@@ -92,6 +93,12 @@ const ContactList = () => {
             <ScrollView style={styles.container}>
                 <View style={styles.card}>
                     {/* card one  */}
+                {/* <TouchableOpacity 
+                onPress={() => navigation.navigate('Profil')}
+                > */}
+                <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardOne}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 1</Text>
@@ -104,7 +111,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
                         {/* card two  */}
+                        <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardTwo}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -117,6 +128,10 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
+                <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                         {/* card three  */}
                     <View style={styles.cardThree}>
                         <View style={styles.containerText}>
@@ -130,7 +145,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                    </TouchableOpacity>
                         {/* card four  */}
+                        <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardThree}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -143,7 +162,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
                     {/* card five  */}
+                    <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardThree}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -156,7 +179,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
                     {/* card six  */}
+                    <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardThree}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -169,7 +196,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
                     {/* card seven  */}
+                    <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardThree}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -182,7 +213,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
                     {/* card eight  */}
+                    <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardThree}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -195,7 +230,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
                     {/* card nine  */}
+                    <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardNine}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -208,7 +247,11 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
+                </TouchableOpacity>
                     {/* card ten  */}
+                    <TouchableOpacity 
+            onPress={() => navigation.navigate('Profil')} 
+            >
                     <View style={styles.cardTen}>
                         <View style={styles.containerText}>
                             <Text numberOfLines={1} style={styles.text}>CONTACT 2</Text>
@@ -221,7 +264,8 @@ const ContactList = () => {
                             <Text numberOfLines={2} style={styles.text}>Lorem ispum note</Text>
                         </View>
                     </View>
-                </View>
+                    </TouchableOpacity>
+                </View>     
             </ScrollView>
         </View>
     )
