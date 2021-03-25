@@ -40,65 +40,160 @@ const  ScanComponent = () => {
       };
 
     const navigation = useNavigation();
-        return scan ? (
-            <View style={styles.other}>
-                 <View style={styles.header}>
-                    <Navbar
-                        imageLogo={<Image 
-                        style={styles.img}    
-                        source={imageLogo} />}
-                        imageOther={
-                            <TouchableOpacity
-                            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
-                            >
-                                 <Image 
-                                    style={styles.menu}
-                                    source={Menu} />
-                            </TouchableOpacity>}
-                    />
-                    <View style={{marginTop:50}}>
-                        <Text style={styles.text} >SCAN</Text>
-                    </View>
-                </View>
+    if(scan ) {
+        <View style={styles.other}>
+        <View style={styles.header}>
+           <Navbar
+               imageLogo={<Image 
+               style={styles.img}    
+               source={imageLogo} />}
+               imageOther={
+                   <TouchableOpacity
+                   onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+                   >
+                        <Image 
+                           style={styles.menu}
+                           source={Menu} />
+                   </TouchableOpacity>}
+           />
+           <View style={{marginTop:50}}>
+               <Text style={styles.text} >SCAN</Text>
+           </View>
+       </View>
 
-                <View style={styles.correct}>
-                    <View style={styles.ContainerCorrect}>
-                        <View style={styles.iconValidate}>
-                            <Image 
-                            style={{
-                                width:50,
-                                height:50,
-                                tintColor:'green',
-                            }}
-                            source={check}
-                            />
-                        </View>
-                        <View style={styles.textCorrect}>
-                            <Text style={{color:'white'}}>Le document que vous avez scanné a bien éte édité par le cabinet</Text>
-                        </View>
-                        <View >
-                            <TouchableOpacity
-                            onPress={() => {}}
-                            style={styles.btn}
-                            >
-                                <Text style={styles.textRenvoyer}>Retour</Text>
-                            </TouchableOpacity>
+       <View style={styles.correct}>
+           <View style={styles.ContainerCorrect}>
+               <View style={styles.iconValidate}>
+                   <Image 
+                   style={{
+                       width:50,
+                       height:50,
+                       tintColor:'green',
+                   }}
+                   source={check}
+                   />
+               </View>
+               <View style={styles.textCorrect}>
+                   <Text style={{color:'white'}}>Le document que vous avez scanné a bien éte édité par le cabinet</Text>
+               </View>
+               <View >
+                   <TouchableOpacity
+                   onPress={() => {}}
+                   style={styles.btn}
+                   >
+                       <Text style={styles.textRenvoyer}>Retour</Text>
+                   </TouchableOpacity>
 
-                            <TouchableOpacity
-                            onPress={() => {}}
-                            style={styles.btn}
-                            >
-                                <Text style={styles.textRenvoyer}>Valider</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-            </View>
+                   <TouchableOpacity
+                   onPress={() => {}}
+                   style={styles.btn}
+                   >
+                       <Text style={styles.textRenvoyer}>Valider</Text>
+                   </TouchableOpacity>
+               </View>
+           </View>
+       </View>
+   </View>
+    } else{
+        <View>
+            <Text>ok</Text>
+        </View>
+    }
 
-        ) : (
+        // return scan ? (
+        //     <View style={styles.other}>
+        //          <View style={styles.header}>
+        //             <Navbar
+        //                 imageLogo={<Image 
+        //                 style={styles.img}    
+        //                 source={imageLogo} />}
+        //                 imageOther={
+        //                     <TouchableOpacity
+        //                     onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+        //                     >
+        //                          <Image 
+        //                             style={styles.menu}
+        //                             source={Menu} />
+        //                     </TouchableOpacity>}
+        //             />
+        //             <View style={{marginTop:50}}>
+        //                 <Text style={styles.text} >SCAN</Text>
+        //             </View>
+        //         </View>
+
+        //         <View style={styles.correct}>
+        //             <View style={styles.ContainerCorrect}>
+        //                 <View style={styles.iconValidate}>
+        //                     <Image 
+        //                     style={{
+        //                         width:50,
+        //                         height:50,
+        //                         tintColor:'green',
+        //                     }}
+        //                     source={check}
+        //                     />
+        //                 </View>
+        //                 <View style={styles.textCorrect}>
+        //                     <Text style={{color:'white'}}>Le document que vous avez scanné a bien éte édité par le cabinet</Text>
+        //                 </View>
+        //                 <View >
+        //                     <TouchableOpacity
+        //                     onPress={() => {}}
+        //                     style={styles.btn}
+        //                     >
+        //                         <Text style={styles.textRenvoyer}>Retour</Text>
+        //                     </TouchableOpacity>
+
+        //                     <TouchableOpacity
+        //                     onPress={() => {}}
+        //                     style={styles.btn}
+        //                     >
+        //                         <Text style={styles.textRenvoyer}>Valider</Text>
+        //                     </TouchableOpacity>
+        //                 </View>
+        //             </View>
+        //         </View>
+        //     </View>
+
+        // ) : (
+        //     <View>
+        //         <View style={styles.header}>
+        //             <Navbar
+        //                 imageLogo={<Image 
+        //                 style={styles.img}    
+        //                 source={imageLogo} />}
+        //                 imageOther={
+        //                     <TouchableOpacity
+        //                     onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+        //                     >
+        //                          <Image 
+        //                             style={styles.menu}
+        //                             source={Menu} />
+        //                     </TouchableOpacity>}
+        //             />
+        //             <View style={{marginTop:30}}>
+        //                 <Text style={styles.text} >Nom du cabinet</Text>
+        //             </View>
+        //         </View>
+        //         {/* code scan  */}
+        //             <View style={styles.scan} >
+        //                 <View style={styles.qrScanner}>
+        //                     <QRCodeScanner
+        //                     onRead={onSuccess}
+        //                     ref={scanner}
+        //                     showMarker={true}
+        //                     reactivate={true}
+        //                     bottomViewStyle={{backgroundColor:'#1F4F4F',top:60}}
+        //                     top={{backgroundColor:'#1F4F4F'}}
+        //                     />
+        //                 </View>
+        //             </View>
+        //         </View>
+        // )
+        return (
             <View>
                 <View style={styles.header}>
-                    <Navbar
+                  <Navbar
                         imageLogo={<Image 
                         style={styles.img}    
                         source={imageLogo} />}

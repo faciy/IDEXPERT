@@ -8,6 +8,7 @@ import phonescan from '../../assets/icons/phonescan.png';
 import calendrier from '../../assets/icons/calendrier.png';
 import contact from '../../assets/images/contact.png';
 import SmartCard from '../../screens/SmartCard';
+import page from '../../assets/icons/page.png';
 
 import {
     DrawerContentScrollView,
@@ -34,7 +35,6 @@ const DrawerContent = (props) => {
 
             <View style={styles.drawerElement}>
                 <DrawerItem
-
                     icon={() => (
                         <Image
                             source={phonescan}
@@ -45,8 +45,19 @@ const DrawerContent = (props) => {
                             }}
                         />
                     )}
+                    iconRight={() => (
+                        <Image
+                            source={page}
+                            style={{
+                                width: 20,
+                                height: 20,
+                                left: 50
+                            }}
+                        />
+                    )}
                     label={() => <Text style={{ color: 'white' }}>Code de sécurité</Text>}
                     onPress={() => navigation.navigate('Scan')}
+                    
                 />
 
                 <DrawerItem
@@ -78,6 +89,7 @@ const DrawerContent = (props) => {
                     )}
                     label={() => <Text style={{ color: 'white' }}>SmartCard</Text>}
                     onPress={() => navigation.navigate('SmartCard')}
+                    
                 />
                 <DrawerItem
                     icon={() => (

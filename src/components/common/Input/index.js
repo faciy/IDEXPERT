@@ -10,7 +10,9 @@ const Input = ({
     style,
     iconList,
     initial,
-    value
+    value,
+    securePass,
+    iconRight
 }) => {
     return (
         <View style={styles.container}>
@@ -24,7 +26,9 @@ const Input = ({
                     style={style}
                     onChangeText={onChangeText}
                     value={value}
+                    secureTextEntry={securePass}
                 />
+                {iconRight}
                 {iconList}
             </View>
         </View>

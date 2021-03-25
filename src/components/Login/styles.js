@@ -60,6 +60,9 @@ export default StyleSheet.create({
         color:'red',
         textAlign:'center',
         top:10
+    },
+    oeil:{
+        left:140
     }
     
    

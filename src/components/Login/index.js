@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Image, ImageBackground, Text, Button, TextInput } from 'react-native'
+import { View, Image, ImageBackground, Text, Button, TextInput, TouchableOpacity } from 'react-native'
 import Input from '../common/Input';
 import bg from '../../assets/images/DeutscheBank.png';
 import styles from './styles';
@@ -12,6 +12,8 @@ import Checkbox from '../common/Checkbox';
 import ButtonCustom from '../common/ButtonCustom';
 import OtherButton from '../common/OtherButton';
 import { useNavigation } from '@react-navigation/native';
+import eye from '../../assets/icons/eye.png';
+import invisible from '../../assets/icons/invisible.png';
 
 const LoginComponent = () => {
 
@@ -19,6 +21,7 @@ const LoginComponent = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [secureTextEntry, setSecureTextEntry] = useState(true)
     const [error, setError] = useState(false)
     const [isSelected, setSelection] = useState(true);
 
@@ -88,8 +91,7 @@ const LoginComponent = () => {
                                 placeholder="E-mail | Nom d'utilisateur" onChangeText={(email) => setEmail(email)}
                                 style={[styles.textInput, {color:Colorsmail()}]}
                                 value={email}
-                            />
-                            
+                            />   
                             <Input
                                 icon={<Image source={logoLock} />}
                                 placeholderTextColor='#FFFFFF64'
@@ -97,6 +99,20 @@ const LoginComponent = () => {
                                 onChangeText={(password) => setPassword(password)}
                                 style={[styles.textInput, {color:ColorsPass()}]}
                                 value={password}
+                                securePass={secureTextEntry}
+                                iconRight={
+                                <TouchableOpacity
+                                style={styles.oeil}
+                                onPress={() => secureTextEntry ? setSecureTextEntry(false) : setSecureTextEntry(true)}
+                                >
+                                    {secureTextEntry ? <Image 
+                                    style={{tintColor:'white',width:20,height:20}}
+                                    source={invisible}
+                                    /> : <Image 
+                                    style={{tintColor:'white',width:20,height:20,left:20}}
+                                    source={eye} />}
+                                    
+                                </TouchableOpacity>}
                             />
                         </View>
                         <View style={styles.checkboxAndForgetButton}>

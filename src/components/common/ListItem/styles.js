@@ -20,11 +20,17 @@ export default StyleSheet.create({
         // paddingHorizontal:20,
     },
     accordion:{
-        bottom: -18, 
+        // bottom: -18, 
         top:10,
+        // marginStart:20,
+        marginEnd:20,
+        // left: -20, 
         marginStart:20,
-        marginEnd:-20,
-        left: -20, 
+        borderBottomColor:'#FFFFFF64',
+        borderBottomWidth:2,
+    },
+    accordionOne:{
+        top:20,
     },
     item:{
         borderBottomColor:'#FFFFFF64',
@@ -36,5 +42,17 @@ export default StyleSheet.create({
         height: SIZES.height,
         width: SIZES.width
     },
+    barTwo:{
+        color: '#FFFFFF9C', 
+        right: 30, 
+        opacity: 0.8, 
+        fontSize: 14,
+        top:15   
+    },
+    select:{
+        color: '#FFFFFF9C', 
+        top: 50,
+        left:20
+    }
 
 })

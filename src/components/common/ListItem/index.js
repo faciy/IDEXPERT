@@ -41,12 +41,12 @@ const ListPays = ({ setNum }) => {
             {expanded ?
                 <View style={styles.container}>
                     <List.Section
-                        titleStyle={{ color: '#FFFFFF9C', top:40}}
+                        titleStyle={{ color: '#FFFFFF9C', top:50}}
                         title="Selectionner votre pays">
                         <List.Accordion
                             expanded={!expanded}
                             onPress={handlePress}
-                            style={styles.accordion}
+                            style={styles.accordionOne}
                             titleStyle={{ color: '#FFFFFF9C', right: 30, opacity: 0.8, fontSize: 14 }}
                             title={selected}
                             left={props => <List.Icon {...props} icon={() => <Image
@@ -59,19 +59,20 @@ const ListPays = ({ setNum }) => {
                         </List.Accordion>
                     </List.Section>
                 </View> : 
-                <View style={styles.container}>
+                <View>
                     <List.Section
-                        titleStyle={{ color: '#FFFFFF9C', top: 40 }}
+                        titleStyle={styles.select}
                         title="Selectionner votre pays">
                         <List.Accordion
                             expanded={!expanded}
                             onPress={handlePress}
                             style={styles.accordion}
-                            titleStyle={{ color: '#FFFFFF9C', right: 30, opacity: 0.8, fontSize: 14 }}
+                            titleStyle={styles.barTwo}
                             title={selected}
                             left={props => <List.Icon {...props} icon={() => <Image
                                 style={{
-                                    right:20
+                                    right:20,
+                                    top:15
                                 }}
                                 source={drapeau}
                             />} color='white' />}>
