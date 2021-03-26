@@ -74,7 +74,7 @@ const DrawerContent = (props) => {
                     label={() => <Text style={{ color: 'white' }}>Evenements</Text>
                     
                     }
-                    onPress={() => navigation.navigate('EvenementNavigation')}
+                    onPress={() => navigation.navigate('Evenements')}
                 />
                 <DrawerItem
                     icon={() => (

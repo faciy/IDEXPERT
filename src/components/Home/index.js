@@ -40,19 +40,19 @@ const HomeComponent = () => {
                     />}
                     imageOther={
                     <View>
-                    <Image
-                        style={styles.notification}
-                        source={bell}
-                    />
+                        <Image
+                            style={styles.notification}
+                            source={bell}
+                        />
                      <Badge style={styles.badge}>3</Badge>
                     </View>
                     }
                     onPress={() => ButtonNotif()}
                 />
                 <Header
-                    textOne={<Text >BIENVENUE <Text numberOfLines={1}>FRANCK BONI</Text>
+                    textOne={<Text numberOfLines={1}>BIENVENUE <Text >FRANCK BONI</Text>
                     </Text>}
-                    textTwo={<Text >FullStack</Text>}
+                    textTwo={<Text numberOfLines={1} >FullStack</Text>}
                     buttonDec={
                     <TouchableOpacity
                     onPress={() => changeModalVisible(true)}

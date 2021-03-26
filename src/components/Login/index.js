@@ -98,19 +98,17 @@ const LoginComponent = () => {
                                 onChangeText={(password) => setPassword(password)}
                                 style={[styles.textInput, {color:ColorsPass()}]}
                                 value={password}
-                                securePass={secureTextEntry}
+                                securePass={secureTextEntry ? true : false}
                                 iconRight={
-                                <TouchableOpacity
-                                style={styles.oeil}
-                                onPress={() => secureTextEntry ? setSecureTextEntry(false) : setSecureTextEntry(true)}
-                                >
-                                    {secureTextEntry ? <Image 
-                                    style={styles.invisible}
-                                    source={invisible}
-                                    /> : <Image 
-                                    style={styles.eye}
-                                    source={eye} />}  
-                                </TouchableOpacity>}
+                                    <View style={styles.containerEye}>
+                                        <TouchableOpacity
+                                        onPress={() => setSecureTextEntry(!secureTextEntry)}
+                                        >
+                                            {secureTextEntry? <Image source={invisible} style={styles.eye} /> : 
+                                            <Image source={eye} style={styles.invisible} />}
+                                        </TouchableOpacity>
+                                    </View>
+                                }
                             />
                         </View>
                         <View style={styles.checkboxAndForgetButton}>

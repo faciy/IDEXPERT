@@ -29,7 +29,7 @@ const NotificationComponent = () => {
                         </TouchableOpacity>}
                 />
                 <View style={{marginTop:20}}>
-                    <Text style={styles.text} >NOTIFICATION</Text>
+                    <Text style={styles.text} >NOTIFICATIONS</Text>
                 </View>
             </View>
             <View style={styles.containerBody}>

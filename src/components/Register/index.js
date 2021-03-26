@@ -12,18 +12,16 @@ import drapeau from '../../assets/icons/drapeau.png';
 import phone from '../../assets/icons/phone.png';
 import ButtonCustom from '../common/ButtonCustom';
 import { useNavigation } from '@react-navigation/native';
-import { List } from 'react-native-paper';
 import ListPays from '../common/ListItem';
-import { color } from 'react-native-reanimated';
+
 
 const RegisterComponent = () => {
 
     const navigation = useNavigation();
 
     const [email, setEmail] = useState('')
-    // const [selection, setSelection] = useState('')
+    const [code, setCode] = useState('')
     const [error, setError] = useState(false)
-    // const [color, setColor] = useState('white')
     const [number, setNumber] = useState('')
     const [register, setRegister] = useState('')
 
@@ -35,13 +33,17 @@ const RegisterComponent = () => {
 
     const colorText = () => {
         console.log('register',register)
-        if(error){
-            return 'red'
-        }else if(register == '680609'){
-            return 'green'
-        }else{
-            return 'white'
-        }
+        if(error){return 'red' }
+        else if(register == '680609' && number == '68060990')
+        { return 'green' }
+        else{return 'white'}
+    }
+    const colorNumber = () => {
+        const nu = typeof(Number(12))
+        console.log('nu',nu)
+        if(error){return 'red' }
+        else if(number == '68060990'){ return 'green'  }
+        else{ return 'white' }
     }
     
 
@@ -51,14 +53,10 @@ const RegisterComponent = () => {
         if(register !== ''){
             if(register == '680609'){
                 setRegister('')
+                setNumber('')
                navigation.navigate('Verification')
-            }else{
-                setError(true)
-            }
-            
-        }else{
-            setError(true)
-        }
+            }else{ setError(true)}    
+        }else{setError(true)}
     }
 
     return ( 
@@ -85,8 +83,8 @@ const RegisterComponent = () => {
                             />
                             <View >
                                 <ListPays 
-                                num = {number}
-                                setNum={setNumber}
+                                num = {code}
+                                setNum={setCode}
                                 />
                             </View>
                             <Input
@@ -94,12 +92,14 @@ const RegisterComponent = () => {
                                     source={phone} />}
                                 initial={<Text 
                                 style={{color:'#FFFFFF9C',left:5}}
-                                >{number}</Text>}
+                                >{code}</Text>}
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Numéro de téléphone"
-                                onChangeText={() => setNumber(number)}
-                                style={styles.textInput}
+                                onChangeText={(number) => setNumber(number)}
+                                value={number}
+                                style={[styles.textInput, {color:colorNumber()}]}
                             />
+                            {error ? <Text style={{left:20, color:'red'}}>Entrez des chiffres svp</Text> : null}
                             <Input
                                 icon={<Image
                                     source={avatar} />}

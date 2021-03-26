@@ -5,7 +5,7 @@ import EvenementInfo from '../screens/EvenementInfo';
 
 const Stack = createStackNavigator();
 
-const EvenementNavigation = () => {
+const Evenements = () => {
     return (
         <Stack.Navigator
             screenOptions={{
@@ -18,4 +18,4 @@ const EvenementNavigation = () => {
     )
 }
 
-export default EvenementNavigation;
+export default Evenements;

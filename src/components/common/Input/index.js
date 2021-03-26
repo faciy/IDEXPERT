@@ -20,6 +20,7 @@ const Input = ({
                 {/* image logo */}
                 {icon} 
                 {initial}
+            {/* <View style={{flexDirection:'row',alignItems:'center'}}> */}
                 <TextInput
                     placeholder={placeholder}
                     placeholderTextColor={placeholderTextColor}
@@ -29,6 +30,7 @@ const Input = ({
                     secureTextEntry={securePass}
                 />
                 {iconRight}
+            {/* </View> */}
                 {iconList}
             </View>
         </View>

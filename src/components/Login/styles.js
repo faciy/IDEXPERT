@@ -2,6 +2,7 @@ import {
     StyleSheet
 } from 'react-native';
 import { SIZES } from '../../assets/theme';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
     background: {
@@ -69,13 +70,16 @@ export default StyleSheet.create({
         width:20,
         height:20, 
         tintColor:'#FFFFFF64',
-        marginStart:20
     },
     invisible:{
         tintColor:'white',
         width:20,
         height:20, 
         tintColor:'#FFFFFF64'
+    },
+    containerEye:{
+        position:'absolute',
+        marginStart:wp('80%')
     }
     
    

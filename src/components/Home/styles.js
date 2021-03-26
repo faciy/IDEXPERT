@@ -2,7 +2,7 @@ import {
     StyleSheet,Dimensions
 } from 'react-native';
 import { SIZES } from '../../assets/theme';
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
     container: {
@@ -37,7 +37,6 @@ export default StyleSheet.create({
       },
       textMail:{
         flexDirection:'row',
-        // justifyContent:'space-between',
         marginTop:20,
         right:30
       },
@@ -127,9 +126,8 @@ export default StyleSheet.create({
         textDecorationLine:'underline'
     },
     badge:{
-        position:'absolute',
-        left:15,
-        bottom:15, 
+        bottom:hp('5%'),
+        left:hp('0%'),
         backgroundColor:'green'
     }
     
