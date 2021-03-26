@@ -34,7 +34,7 @@ const RegisterComponent = () => {
     const colorText = () => {
         console.log('register',register)
         if(error){return 'red' }
-        else if(register == '680609' && number == '68060990')
+        else if(register == '680609')
         { return 'green' }
         else{return 'white'}
     }
@@ -48,10 +48,10 @@ const RegisterComponent = () => {
     
 
 
-    const Regist = (register) => {
+    const Regist = (register, number) => {
         // console.log('register',register)
         if(register !== ''){
-            if(register == '680609'){
+            if(register == '680609' && number == '68060990'){
                 setRegister('')
                 setNumber('')
                navigation.navigate('Verification')
@@ -99,7 +99,7 @@ const RegisterComponent = () => {
                                 value={number}
                                 style={[styles.textInput, {color:colorNumber()}]}
                             />
-                            {error ? <Text style={{left:20, color:'red'}}>Entrez des chiffres svp</Text> : null}
+                            {error ? <Text style={{left:20, color:'red'}}>Entrez un numéro correct</Text> : null}
                             <Input
                                 icon={<Image
                                     source={avatar} />}
@@ -115,7 +115,7 @@ const RegisterComponent = () => {
                         <View>
                             <ButtonCustom
                                 text={<Text>Valider</Text>}
-                                onPress={() => Regist(register)} />
+                                onPress={() => Regist(register,number)} />
                         </View>
                     </ScrollView>
                     </ImageBackground>

@@ -126,9 +126,11 @@ export default StyleSheet.create({
         textDecorationLine:'underline'
     },
     badge:{
-        bottom:hp('5%'),
-        left:hp('0%'),
-        backgroundColor:'green'
+        position:'absolute',
+        bottom:hp('2%'),
+        backgroundColor:'green',
+        justifyContent:'center',
+        alignItems:'center'
     }
     
       

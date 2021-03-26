@@ -19,7 +19,7 @@ const Body = () => {
     }
 
     const ButtonEven = () => {
-        navigation.navigate('EvenementNavigation')
+        navigation.navigate('Evenements')
     }
 
     const ButtonContact = () => {

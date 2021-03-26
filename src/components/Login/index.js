@@ -29,6 +29,7 @@ const LoginComponent = () => {
         setTimeout(() => {
             setError(false)
         }, 5000);
+        return clearTimeout()
     })
 
     const Colorsmail = () => {
