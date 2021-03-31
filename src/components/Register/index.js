@@ -29,6 +29,7 @@ const RegisterComponent = () => {
         setTimeout(() => {
             setError(false)
         }, 5000);
+        return clearTimeout()
     })
 
     const colorText = () => {
@@ -93,6 +94,7 @@ const RegisterComponent = () => {
                                 initial={<Text 
                                 style={{color:'#FFFFFF9C',left:5}}
                                 >{code}</Text>}
+                                keyboardType="numeric"
                                 placeholderTextColor='#FFFFFF64'
                                 placeholder="Numéro de téléphone"
                                 onChangeText={(number) => setNumber(number)}

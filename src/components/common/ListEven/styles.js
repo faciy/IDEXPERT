@@ -11,7 +11,7 @@ export default StyleSheet.create({
     },
     image:{
         width: wp('80%'),
-        height: hp('10%') , 
+        // height: hp('10%') , 
         borderTopRightRadius: 20, 
         borderTopLeftRadius: 20
     },

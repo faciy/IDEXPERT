@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
 import notification from '../../../assets/icons/notification.png';
 
-const Navbar = ({onPress,imageLogo, imageOther}) => {
+const Navbar = ({onPress,imageLogo, imageOther, power}) => {
     return (
         <View style={styles.navbar}>
             {/* logo button  */}
@@ -11,14 +11,10 @@ const Navbar = ({onPress,imageLogo, imageOther}) => {
                 {imageLogo}
             </View>
             {/* notification button */}
-            <TouchableOpacity
-            onPress={onPress}
-            style={{alignSelf:'center'}}
-            >
-                <View>
-                    {imageOther}
-                </View>
-            </TouchableOpacity>
+            <View style={{flexDirection:'row'}}>
+                        {imageOther}
+                        {power}
+            </View>
         </View>
     )
 }

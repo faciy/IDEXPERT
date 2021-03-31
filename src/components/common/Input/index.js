@@ -12,7 +12,8 @@ const Input = ({
     initial,
     value,
     securePass,
-    iconRight
+    iconRight,
+    keyboardType
 }) => {
     return (
         <View style={styles.container}>
@@ -25,6 +26,7 @@ const Input = ({
                     placeholder={placeholder}
                     placeholderTextColor={placeholderTextColor}
                     style={style}
+                    keyboardType={keyboardType}
                     onChangeText={onChangeText}
                     value={value}
                     secureTextEntry={securePass}

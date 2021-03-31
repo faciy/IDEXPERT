@@ -32,20 +32,26 @@ const TabBottomNavigator = () => {
 
     return (
         <Tab.Navigator
-        initialRouteName='Home'
+            initialRouteName='Home'
             tabBarOptions={tabOptions}
             tabBar={props => <MyTabBar {...props} />}
         >
 
             <Tab.Screen
+                options={{
+                    tabBarLabel: 'SMART CARD',
+                }}
                 name="SmartCard"
                 component={SmartCard}
-                initialParams={{icon : lock}}
+                initialParams={{ icon: lock }}
             />
             <Tab.Screen
+                options={{
+                    tabBarLabel: 'SCAN',
+                }}
                 name="Scan"
                 component={Scan}
-                initialParams={{icon : phonescan}}
+                initialParams={{ icon: phonescan }}
             />
             <Tab.Screen
                 options={{
@@ -56,16 +62,19 @@ const TabBottomNavigator = () => {
             />
             <Tab.Screen
                 options={{
-                    tabBarLabel: 'Evenements',
+                    tabBarLabel: 'EVENEMENTS',
                 }}
                 name="Evenements"
                 component={Evenements}
-                initialParams={{icon : calendar}}
+                initialParams={{ icon: calendar }}
             />
             <Tab.Screen
+                options={{
+                    tabBarLabel: 'CONTACTS',
+                }}
                 name="Contact"
                 component={Contact}
-                initialParams={{icon : contact}}
+                initialParams={{ icon: contact }}
 
             />
 

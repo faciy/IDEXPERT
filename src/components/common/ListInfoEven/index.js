@@ -21,7 +21,7 @@ const ListInfoEven = () => {
                     text: "Refuser", 
                 },
               {
-                text: "Auoriser",
+                text: "Autoriser",
                 onPress: () =>
                     SendIntentAndroid.addCalendarEvent({
                     title: "Tech Monday",
@@ -39,7 +39,7 @@ const ListInfoEven = () => {
     const Localisation = () => {
         Alert.alert(
             "Activer la localisation",
-            "Voulez vus activer la localisation?",
+            "Voulez vous voir l'itinéraire?",
             [
                 {
                     text:'Refuser'

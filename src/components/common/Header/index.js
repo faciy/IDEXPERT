@@ -8,9 +8,6 @@ const Header = ({textOne, textTwo,buttonDec, image}) => {
                 <View style={styles.name}>
                     <Text style={styles.text}>{textOne}</Text>
                     <Text style={styles.text}>{textTwo}</Text>
-                    <View>
-                        {buttonDec}
-                    </View>
                 </View>
                 <View style={styles.photoContainer}>
                     {image}

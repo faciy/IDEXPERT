@@ -20,6 +20,12 @@ export default StyleSheet.create({
     notification:{
         width:30,
         height:30,
+        tintColor:'white',
+        right:20
+    },
+    power:{
+        width:30,
+        height:30,
         tintColor:'white'
     },
       modal:{
@@ -129,8 +135,10 @@ export default StyleSheet.create({
         position:'absolute',
         bottom:hp('2%'),
         backgroundColor:'green',
-        justifyContent:'center',
-        alignItems:'center'
+        left:wp('-2%')
+    },
+    blocNotifAndPower:{
+        flexDirection:'row',
     }
     
       

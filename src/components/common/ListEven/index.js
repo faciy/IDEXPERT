@@ -48,9 +48,7 @@ const ListEven = () => {
     const renderItem = ({ item }) => {
         return (
             <View style={styles.form}>
-                <TouchableOpacity
-                    onPress={() => EventButton()}
-                >
+                <TouchableOpacity  onPress={() => EventButton()}>
                     <Image
                         style={styles.image}
                         source={item.image}

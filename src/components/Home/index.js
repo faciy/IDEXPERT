@@ -6,11 +6,11 @@ import Header from '../common/Header';
 import photo from '../../assets/images/photo.jpg';
 import Body from '../common/Body';
 import logo from '../../assets/icons/logoIdExpert.png';
-import notification from '../../assets/icons/notification.png';
 import iconMail from '../../assets/icons/iconMail.png';
 import { useNavigation } from '@react-navigation/native';
 import bell from '../../assets/icons/bell.png';
 import { Badge } from 'react-native-paper';
+import power from '../../assets/icons/power-button.png';
 
 const HomeComponent = () => {
     const navigation = useNavigation();
@@ -39,26 +39,35 @@ const HomeComponent = () => {
                         source={logo}
                     />}
                     imageOther={
-                    <View>
+                    <View style={styles.blocNotifAndPower}>
+                        <TouchableOpacity
+                            onPress={() => ButtonNotif()}
+                            style={{alignSelf:'center'}}
+                            >
                         <Image
                             style={styles.notification}
                             source={bell}
                         />
-                     <Badge style={styles.badge}>3</Badge>
+                            <Badge style={styles.badge}>3</Badge>
+                        </TouchableOpacity>
                     </View>
                     }
-                    onPress={() => ButtonNotif()}
+                    power={
+                        <TouchableOpacity
+                        onPress={() => changeModalVisible(true)}
+                        style={{alignSelf:'center'}}
+                            >
+                        <Image
+                            style={styles.power}
+                            source={power}
+                        />
+                        </TouchableOpacity>
+                    }
                 />
                 <Header
                     textOne={<Text numberOfLines={1}>BIENVENUE <Text >FRANCK BONI</Text>
                     </Text>}
                     textTwo={<Text numberOfLines={1} >FullStack</Text>}
-                    buttonDec={
-                    <TouchableOpacity
-                    onPress={() => changeModalVisible(true)}
-                    >
-                        <Text style={styles.deconnecter}>Se déconnecter</Text>
-                    </TouchableOpacity>}
                     image={
                         <TouchableOpacity
                         onPress={() => navigation.navigate('Profil')}>
